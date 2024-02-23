@@ -198,4 +198,27 @@ if (b==1){
     studentai.clear();
      }while (Pasirinkimas != 4);
 
-}
+}else {
+    ifstream file;
+    file.open("kursiokai.txt");
+    if (!file){
+        cout << "Nepavyko atidaryti failo." << endl;
+    }
+    string line;
+    getline(file, line);
+
+    int pazymys;
+    while (getline(file, line)) {
+       // cout << line << endl;
+       mok naujasStud;
+       istringstream iss(line);
+       iss >> naujasStud.var >> naujasStud.pav;
+       while (iss >> pazymys){
+        naujasStud.nd.push_back(pazymys);
+       }
+        naujasStud.eg = naujasStud.nd.back();
+        naujasStud.nd.pop_back();
+
+       studentai.push_back(naujasStud);
+    }
+    calculateResults(studentai);
