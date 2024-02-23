@@ -230,4 +230,32 @@ cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, 
         cin.clear();
         cin.ignore();
         cin >> c;
-    }
+    }if (c==1){
+        meniuAntras();
+        int antrasPasirinkimas;
+        cin >> antrasPasirinkimas;
+            switch (antrasPasirinkimas){
+            case 1:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalVarda);
+                    break;
+                }
+            case 2:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalPavarde);
+                    break;
+                }
+            case 3:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalVidurki);
+                    break;
+                }
+            case 4:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalMediana);
+                    break;
+                }
+            }
+            isvedimas(studentai, cout);
+            return 0;
+            }
