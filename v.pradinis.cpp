@@ -222,7 +222,7 @@ if (b==1){
        studentai.push_back(naujasStud);
     }
     calculateResults(studentai);
-cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
+    cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
     int c;
     cin >> c;
     while ( !(c == 1 || c == 2)){
@@ -230,7 +230,8 @@ cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, 
         cin.clear();
         cin.ignore();
         cin >> c;
-    }if (c==1){
+    }
+    if (c==1){
         meniuAntras();
         int antrasPasirinkimas;
         cin >> antrasPasirinkimas;
