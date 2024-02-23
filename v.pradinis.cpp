@@ -4,6 +4,9 @@
 #include <algorithm>
 #include <numeric>
 #include <ctime>
+#include <fstream>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -53,28 +56,46 @@ void calculateResults(vector<mok>& stud) {
         }
     }
 }
-void isvedimas(vector<mok>& stud){
+void isvedimas(vector<mok>& stud, ostream& os){
     cout << "Jei norite matyti galutini rezultata apskaiciuota pagal:" << endl;
     cout << "vidurki - iveskite V" << endl;
     cout << "mediana - iveskite M"<< endl;
     char a;
     cin >> a;
     if (a == 'V'){
-            cout << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
-            cout << "--------------------------------------------------------------" << endl;
+            os << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
+            os << "--------------------------------------------------------------" << endl;
             for (int i = 0; i < stud.size(); i++){
-            cout << left << setw(20) << stud[i].var << setw(20)<< stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_vid << endl;
+            os << left << setw(20) << stud[i].var << setw(20)<< stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_vid << endl;
         }
     } if ( a== 'M'){
-            cout << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) <<  "Galutinis (Med.)" << endl;
-            cout << "--------------------------------------------------------------" << endl;
+            os << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) <<  "Galutinis (Med.)" << endl;
+            os << "--------------------------------------------------------------" << endl;
             for (int i = 0; i < stud.size(); i++){
-            cout << left << setw(20) << stud[i].var << setw(20)<< stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_med << endl;
+            os << left << setw(20) << stud[i].var << setw(20)<< stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_med << endl;
         }
         }
         }
+void meniuAntras(){
+    cout << "jei norite, kad duomenys butu isrikiuoti pagal:" << endl;
+    cout << "varda - iveskite 1" << endl;
+    cout << "pavarde - iveskite 2" << endl;
+    cout << "vidurki - iveskite 3" << endl;
+    cout << "mediana - iveskite 4" << endl;}
+bool pagalVarda(const mok& a, const mok& b){
+    return stoi(a.var.substr(6,1))< stoi(b.var.substr(6,1));
+}
+bool pagalPavarde(const mok& a, const mok& b){
+    return stoi(a.pav.substr(7,1)) < stoi (b.pav.substr(7,1));
+}
+bool pagalMediana(const mok& a, const mok& b){
+    return a.gal_med < b.gal_med;
+}
+bool pagalVidurki(const mok& a, const mok& b){
+    return a.gal_vid < b.gal_vid;
+}
 int main(){
-    int Pasirinkimas, n, sum;
+    int Pasirinkimas, n, b, sum;
     vector<mok> studentai;
     double med;
     char a;
@@ -83,7 +104,18 @@ int main(){
     string pavardes[] = {"Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte"};
 
     srand(time(NULL));
-do {
+
+    cout << "Jei norite duomenis ivesti ranka, iveskite 1, jei norite, kad duomenys butu nuskaityti is failo, iveskite 2" << endl;
+    cin >> b;
+    while ( !(b == 1 || b == 2)){
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+        cin.clear();
+        cin.ignore();
+        cin >> b;
+    }
+if (b==1){
+
+    do {
         meniu();
         cout << "Jusu pasirinkimas: ";
         while (!(cin >> Pasirinkimas)){
@@ -101,7 +133,7 @@ do {
                     ivedimas(studentai);
                 }
                 calculateResults(studentai);
-                isvedimas(studentai);
+                isvedimas(studentai, cout);
             break;}
             case 2: {
                 cout << "Iveskite studentu kieki: " << endl;
@@ -124,7 +156,7 @@ do {
                 }
 
             calculateResults(studentai);
-            isvedimas(studentai);
+            isvedimas(studentai, cout);
             break;
             }
 
@@ -148,7 +180,7 @@ do {
                 studentai.push_back(naujasStud);
                 }
             calculateResults(studentai);
-            isvedimas(studentai);
+            isvedimas(studentai, cout);
             break;
             }
 
@@ -166,3 +198,4 @@ do {
     studentai.clear();
      }while (Pasirinkimas != 4);
 
+}
