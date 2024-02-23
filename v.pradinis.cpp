@@ -222,3 +222,12 @@ if (b==1){
        studentai.push_back(naujasStud);
     }
     calculateResults(studentai);
+cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
+    int c;
+    cin >> c;
+    while ( !(c == 1 || c == 2)){
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+        cin.clear();
+        cin.ignore();
+        cin >> c;
+    }
