@@ -258,4 +258,41 @@ cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, 
             }
             isvedimas(studentai, cout);
             return 0;
+            }else {
+        ofstream out ("isvedimas.txt");
+        if (!out)
+        cout << "Nepavyko atidaryti failo išvedimui." << endl;
+        meniuAntras();
+        int antrasPasirinkimas;
+        cin >> antrasPasirinkimas;
+            switch (antrasPasirinkimas){
+                case 1:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalVarda);
+                    isvedimas(studentai, out);
+                    break;
+                }
+            case 2:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalPavarde);
+                    isvedimas(studentai, out);
+                    break;
+                }
+            case 3:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalVidurki);
+                    isvedimas(studentai, out);
+                    break;
+                }
+            case 4:
+                {
+                    sort(studentai.begin(), studentai.end(), pagalMediana);
+                    isvedimas(studentai, out);
+                    break;
+                }
             }
+            out.close();
+
+                }
+            }
+}
