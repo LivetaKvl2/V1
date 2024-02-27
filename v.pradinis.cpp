@@ -7,8 +7,10 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <chrono>
 
 using namespace std;
+
 
 struct mok {
 string var, pav;
@@ -82,6 +84,7 @@ void meniuAntras(){
     cout << "pavarde - iveskite 2" << endl;
     cout << "vidurki - iveskite 3" << endl;
     cout << "mediana - iveskite 4" << endl;}
+
 bool pagalVarda(const mok& a, const mok& b){
     return stoi(a.var.substr(6,1))< stoi(b.var.substr(6,1));
 }
@@ -94,6 +97,12 @@ bool pagalMediana(const mok& a, const mok& b){
 bool pagalVidurki(const mok& a, const mok& b){
     return a.gal_vid < b.gal_vid;
 }
+
+chrono::milliseconds trukmesSkaiciavimas(chrono::high_resolution_clock::time_point pradzia,chrono::high_resolution_clock::time_point pabaiga) {
+    auto trukme = chrono::duration_cast<chrono::milliseconds>(pabaiga - pradzia);
+    return trukme;
+}
+
 int main(){
     int Pasirinkimas, n, b, sum;
     vector<mok> studentai;
@@ -205,6 +214,7 @@ if (b==1){
         cout << "Nepavyko atidaryti failo." << endl;
     }
     string line;
+    auto nuskaitymoPradzia = chrono::high_resolution_clock::now();
     getline(file, line);
 
     int pazymys;
@@ -221,7 +231,10 @@ if (b==1){
 
        studentai.push_back(naujasStud);
     }
+    auto nuskaitymoPabaiga = chrono::high_resolution_clock::now();
+    auto skaicPradzia = chrono::high_resolution_clock::now();
     calculateResults(studentai);
+    auto skaicPabaiga = chrono::high_resolution_clock::now();
     cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
     int c;
     cin >> c;
@@ -235,6 +248,7 @@ if (b==1){
         meniuAntras();
         int antrasPasirinkimas;
         cin >> antrasPasirinkimas;
+        auto rikiavimoPradzia = chrono::high_resolution_clock::now();
             switch (antrasPasirinkimas){
             case 1:
                 {
@@ -257,43 +271,50 @@ if (b==1){
                     break;
                 }
             }
+            auto rikiavimoPabaiga = chrono::high_resolution_clock::now();
             isvedimas(studentai, cout);
+            cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
+            cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
+            cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             return 0;
             }else {
         ofstream out ("isvedimas.txt");
         if (!out)
-        cout << "Nepavyko atidaryti failo išvedimui." << endl;
+        cout << "Nepavyko atidaryti failo isvedimui." << endl;
         meniuAntras();
         int antrasPasirinkimas;
         cin >> antrasPasirinkimas;
+            auto rikiavimoPradzia = chrono::high_resolution_clock::now();
             switch (antrasPasirinkimas){
                 case 1:
                 {
                     sort(studentai.begin(), studentai.end(), pagalVarda);
-                    isvedimas(studentai, out);
                     break;
                 }
             case 2:
                 {
                     sort(studentai.begin(), studentai.end(), pagalPavarde);
-                    isvedimas(studentai, out);
                     break;
                 }
             case 3:
                 {
                     sort(studentai.begin(), studentai.end(), pagalVidurki);
-                    isvedimas(studentai, out);
                     break;
                 }
             case 4:
                 {
                     sort(studentai.begin(), studentai.end(), pagalMediana);
-                    isvedimas(studentai, out);
                     break;
                 }
             }
+            auto rikiavimoPabaiga = chrono::high_resolution_clock::now();
+            isvedimas(studentai, out);
+            cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
+            cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
+            cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             out.close();
 
                 }
+                return 0;
             }
 }
