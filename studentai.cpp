@@ -32,7 +32,7 @@ void ivedimas (vector<mok>& stud) {
     while (!(cin >> naujas_stud.eg) || naujas_stud.eg < 1 || naujas_stud.eg > 10){
         cout << "Netinkamas formatas, bandykite dar karta" << endl;
         cin.clear();
-        cin.ignore();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
    
     stud.push_back(naujas_stud);
