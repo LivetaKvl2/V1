@@ -1,17 +1,4 @@
 #include "studentai.h"
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include <algorithm>
-#include <numeric>
-#include <ctime>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <chrono>
-#include <cstdlib>
-
-using namespace std;
 
 void ivedimas (vector<mok>& stud) {
     mok naujas_stud;
