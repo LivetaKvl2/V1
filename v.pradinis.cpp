@@ -31,7 +31,7 @@ if (b==1){
         }
         switch (Pasirinkimas) {
             case 1:{
-                cout << "Noredami ivesti naujo studento duomenis, spauskite bet kokia raide. Noredami uzbaigti iveskite 'stop'" << endl;
+                cout << "Noredami ivesti naujo studento duomenis, iveskite bet kokia raide. Noredami uzbaigti iveskite 'stop'" << endl;
                 string a;
                 while (cin >> a && a !="stop"){
                     ivedimas(studentai);
