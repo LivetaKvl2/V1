@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <chrono>
+#include <cstdlib>
 
 using namespace std;
 
@@ -104,7 +105,6 @@ chrono::milliseconds trukmesSkaiciavimas(chrono::high_resolution_clock::time_poi
 }
 
 int main(){
-    
     int Pasirinkimas, n, b, sum;
     vector<mok> studentai;
     double med;
@@ -140,7 +140,7 @@ if (b==1){
                 cout << "Noredami ivesti naujo studento duomenis, spauskite bet kokia raide. Noredami uzbaigti iveskite 'stop'" << endl;
                 string a;
                 while (cin >> a && a !="stop"){
-                    ivedimas(studentai);
+                    (studentai);
                 }
                 calculateResults(studentai);
                 isvedimas(studentai, cout);
@@ -210,9 +210,10 @@ if (b==1){
 
 }else {
     ifstream file;
-    file.open("kursiokai.txt");
+    file.open("studentai10000.txt");
     if (!file){
         cout << "Nepavyko atidaryti failo." << endl;
+        exit(EXIT_FAILURE);
     }
     string line;
     auto nuskaitymoPradzia = chrono::high_resolution_clock::now();
@@ -279,7 +280,7 @@ if (b==1){
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             return 0;
             }else {
-        ofstream out ("isvedimas.txt");
+        ofstream out ("kursiokai.txt");
         if (!out)
         cout << "Nepavyko atidaryti failo isvedimui." << endl;
         meniuAntras();
