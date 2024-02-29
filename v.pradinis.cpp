@@ -1,11 +1,9 @@
 #include "studentai.h"
 
 int main(){
-    int Pasirinkimas, n, b, sum;
+    int Pasirinkimas, n, b;
     vector<mok> studentai;
-    double med;
-    
-
+      
     string vardai[] = {"Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana"};
     string pavardes[] = {"Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte"};
 
