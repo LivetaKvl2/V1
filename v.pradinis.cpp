@@ -104,10 +104,11 @@ chrono::milliseconds trukmesSkaiciavimas(chrono::high_resolution_clock::time_poi
 }
 
 int main(){
+    cout << "labas"<< endl;
     int Pasirinkimas, n, b, sum;
     vector<mok> studentai;
     double med;
-    char a;
+    
 
     string vardai[] = {"Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana"};
     string pavardes[] = {"Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte"};
