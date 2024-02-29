@@ -6,14 +6,27 @@ void ivedimas (vector<mok>& stud) {
     cin >> naujas_stud.var >> naujas_stud.pav;
     int pazymys;
     cout << "Iveskite studento tarpinius namu darbu rezultatus(noredami uzbaigti, iveskite neigiama skaiciu):" << endl;
-    while (cin >> pazymys) {
-            if (pazymys < 0) {
+    while (true) {
+        cin >> pazymys;
+        if (cin.fail() || pazymys > 10 || pazymys == 0) {
+            cin.clear();
+            cin.ignore();
+            cout << "Netinkamas formatas, bandykite dar karta" << endl;
+            continue;
+        }
+
+        if (pazymys < 0) {
                 break;
-            }
+        }
         naujas_stud.nd.push_back(pazymys);
     }
     cout << "Iveskite studento egzamino rezultata:" << endl;
-    cin >> naujas_stud.eg;
+    while (!(cin >> naujas_stud.eg)||naujas_stud.eg < 1 || naujas_stud.eg > 10){
+        cout << "Netinkamas formatas, bandykite dar karta" << endl;
+        cin.clear();
+        cin.ignore();
+    }
+   
     stud.push_back(naujas_stud);
 }
 
