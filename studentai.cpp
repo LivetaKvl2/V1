@@ -66,14 +66,18 @@ void isvedimas(vector<mok>& stud, ostream& os){
     cout << "vidurki - iveskite V" << endl;
     cout << "mediana - iveskite M"<< endl;
     char a;
-    cin >> a;
-    if (a == 'V'){
+    while (!(cin >> a) || (a != 'V' && a != 'v' && a != 'M' && a != 'm' )){
+        cout << "Netinkama ivestis, bandykite dar karta" << endl;
+        cin.clear();
+        cin.ignore();
+    }
+    if (a == 'V' || a == 'v'){
             os << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
             os << "--------------------------------------------------------------" << endl;
             for (int i = 0; i < stud.size(); i++){
             os << left << setw(20) << stud[i].var << setw(20)<< stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_vid << endl;
         }
-    } if ( a== 'M'){
+    } if ( a== 'M' || a == 'm'){
             os << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) <<  "Galutinis (Med.)" << endl;
             os << "--------------------------------------------------------------" << endl;
             for (int i = 0; i < stud.size(); i++){
