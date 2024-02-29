@@ -20,8 +20,16 @@ void ivedimas (vector<mok>& stud) {
         }
         naujas_stud.nd.push_back(pazymys);
     }
+    try {
+        if (naujas_stud.nd.empty()) {
+            throw runtime_error("Neivestas nei vienas pazymys.");
+        }
+    } catch (const runtime_error& e) {
+        cout << e.what() << endl;
+        exit(1);
+    }
     cout << "Iveskite studento egzamino rezultata:" << endl;
-    while (!(cin >> naujas_stud.eg)||naujas_stud.eg < 1 || naujas_stud.eg > 10){
+    while (!(cin >> naujas_stud.eg) || naujas_stud.eg < 1 || naujas_stud.eg > 10){
         cout << "Netinkamas formatas, bandykite dar karta" << endl;
         cin.clear();
         cin.ignore();
