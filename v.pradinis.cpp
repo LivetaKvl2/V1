@@ -79,7 +79,7 @@ if (b==1){
                     cin.clear();
                     cin.ignore();
                 };
-                cout << "Kiek pazymiu norite, kad programa sugeneruotu kiekvienam studentui?:" << endl;
+                cout << "Kiek pazymiu norite, kad programa sugeneruotu kiekvienam studentui?" << endl;
                 int pazymys;
                 while (!(cin >> pazymys) || pazymys < 1){
                         cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -126,7 +126,7 @@ if (b==1){
         exit(EXIT_FAILURE);
     }
     string line;
-    auto nuskaitymoPradzia = chrono::high_resolution_clock::now();
+    auto nuskaitymoPradzia = high_resolution_clock::now();
     getline(file, line);
 
     int pazymys;
@@ -143,10 +143,10 @@ if (b==1){
 
        studentai.push_back(naujasStud);
     }
-    auto nuskaitymoPabaiga = chrono::high_resolution_clock::now();
-    auto skaicPradzia = chrono::high_resolution_clock::now();
+    auto nuskaitymoPabaiga = high_resolution_clock::now();
+    auto skaicPradzia = high_resolution_clock::now();
     calculateResults(studentai);
-    auto skaicPabaiga = chrono::high_resolution_clock::now();
+    auto skaicPabaiga = high_resolution_clock::now();
     cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
     int c;
     cin >> c;
@@ -158,7 +158,7 @@ if (b==1){
     }
     if (c==1){
         meniuAntras(antrasPasirinkimas);
-        auto rikiavimoPradzia = chrono::high_resolution_clock::now();
+        auto rikiavimoPradzia = high_resolution_clock::now();
             switch (antrasPasirinkimas){
             case 1:
                 {
@@ -181,7 +181,7 @@ if (b==1){
                     break;
                 }
             }
-            auto rikiavimoPabaiga = chrono::high_resolution_clock::now();
+            auto rikiavimoPabaiga = high_resolution_clock::now();
             isvedimas(studentai, cout);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
@@ -192,7 +192,7 @@ if (b==1){
         if (!out)
         cout << "Nepavyko atidaryti failo isvedimui." << endl;
         meniuAntras(antrasPasirinkimas);
-            auto rikiavimoPradzia = chrono::high_resolution_clock::now();
+            auto rikiavimoPradzia = high_resolution_clock::now();
             switch (antrasPasirinkimas){
                 case 1:
                 {
@@ -215,7 +215,7 @@ if (b==1){
                     break;
                 }
             }
-            auto rikiavimoPabaiga = chrono::high_resolution_clock::now();
+            auto rikiavimoPabaiga = high_resolution_clock::now();
             isvedimas(studentai, out);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;

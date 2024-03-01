@@ -26,7 +26,7 @@ void ivedimas(vector<mok>& stud);
 void calculateResults(vector<mok>& stud);
 void isvedimas(vector<mok>& stud, ostream& os);
 void meniu();
-void meniuAntras(int antrasPasirinkimas);
+void meniuAntras(int& antrasPasirinkimas);
 bool pagalVarda(const mok& a, const mok& b);
 bool pagalPavarde(const mok& a, const mok& b);
 bool pagalMediana(const mok& a, const mok& b);

@@ -86,7 +86,7 @@ void isvedimas(vector<mok>& stud, ostream& os){
         }
         }
 
-void meniuAntras(int antrasPasirinkimas){
+void meniuAntras(int& antrasPasirinkimas){
     cout << "jei norite, kad duomenys butu isrikiuoti pagal:" << endl;
     cout << "varda - iveskite 1" << endl;
     cout << "pavarde - iveskite 2" << endl;
@@ -95,7 +95,7 @@ void meniuAntras(int antrasPasirinkimas){
     while (!(cin >> antrasPasirinkimas) || antrasPasirinkimas < 1 || antrasPasirinkimas > 4){
         cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
         cin.clear();
-        cin.ignore();
+        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
     }
     }
 
@@ -112,7 +112,7 @@ bool pagalVidurki(const mok& a, const mok& b){
     return a.gal_vid < b.gal_vid;
 }
 
-chrono::milliseconds trukmesSkaiciavimas(chrono::high_resolution_clock::time_point pradzia,chrono::high_resolution_clock::time_point pabaiga) {
-    auto trukme = chrono::duration_cast<chrono::milliseconds>(pabaiga - pradzia);
+milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia,high_resolution_clock::time_point pabaiga) {
+    auto trukme = duration_cast<milliseconds>(pabaiga - pradzia);
     return trukme;
 }
