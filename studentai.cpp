@@ -86,12 +86,18 @@ void isvedimas(vector<mok>& stud, ostream& os){
         }
         }
 
-void meniuAntras(){
+void meniuAntras(int antrasPasirinkimas){
     cout << "jei norite, kad duomenys butu isrikiuoti pagal:" << endl;
     cout << "varda - iveskite 1" << endl;
     cout << "pavarde - iveskite 2" << endl;
     cout << "vidurki - iveskite 3" << endl;
-    cout << "mediana - iveskite 4" << endl;}
+    cout << "mediana - iveskite 4" << endl;
+    while (!(cin >> antrasPasirinkimas) || antrasPasirinkimas < 1 || antrasPasirinkimas > 4){
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+        cin.clear();
+        cin.ignore();
+    }
+    }
 
 bool pagalVarda(const mok& a, const mok& b){
     return stoi(a.var.substr(6,1))< stoi(b.var.substr(6,1));

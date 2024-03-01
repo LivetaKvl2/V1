@@ -1,7 +1,7 @@
 #include "studentai.h"
 
 int main(){
-    int Pasirinkimas, n, b;
+    int Pasirinkimas, antrasPasirinkimas, n, b;
     vector<mok> studentai;
       
     string vardai[] = {"Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana"};
@@ -41,14 +41,22 @@ if (b==1){
             break;}
             case 2: {
                 cout << "Iveskite studentu kieki: " << endl;
-                cin >> n;
+                while (!(cin >> n) || n < 1){
+                    cout << "Neteisinga ivestis, bandykite dar karta" << endl;
+                    cin.clear();
+                    cin.ignore();
+                };
                 mok naujasStud;
                 for (int i = 0; i < n; i++) {
                     cout << "Iveskite studento varda ir pavarde: " << endl;
                     cin >> naujasStud.var >> naujasStud.pav;
                     int pazymys;
                     cout << "Kiek pazymiu norite, kad programa sugeneruotu?: " << endl;
-                    cin >> pazymys;
+                    while (!(cin >> pazymys) || pazymys < 1){
+                        cout << "Neteisinga ivestis, bandykite dar karta" << endl;
+                        cin.clear();
+                        cin.ignore();
+                    };
                     int sum = 0;
                     for (int j = 0; j < pazymys; j++) {
                         int rand_paz = rand() % 10 + 1;
@@ -66,10 +74,18 @@ if (b==1){
 
             case 3: {
                 cout << "Iveskite studentu kieki:" << endl;
-                cin >> n;
+                while (!(cin >> n) || n < 1){
+                    cout << "Neteisinga ivestis, bandykite dar karta" << endl;
+                    cin.clear();
+                    cin.ignore();
+                };
                 cout << "Kiek pazymiu norite, kad programa sugeneruotu kiekvienam studentui?:" << endl;
                 int pazymys;
-                cin >> pazymys;
+                while (!(cin >> pazymys) || pazymys < 1){
+                        cout << "Neteisinga ivestis, bandykite dar karta" << endl;
+                        cin.clear();
+                        cin.ignore();
+                    };
                 mok naujasStud;
                 for (int i = 0; i < n; i++) {
                     naujasStud.var = vardai[rand() % (sizeof(vardai) / sizeof(vardai[0]))];
@@ -141,9 +157,7 @@ if (b==1){
         cin >> c;
     }
     if (c==1){
-        meniuAntras();
-        int antrasPasirinkimas;
-        cin >> antrasPasirinkimas;
+        meniuAntras(antrasPasirinkimas);
         auto rikiavimoPradzia = chrono::high_resolution_clock::now();
             switch (antrasPasirinkimas){
             case 1:
@@ -177,9 +191,7 @@ if (b==1){
         ofstream out ("kursiokai.txt");
         if (!out)
         cout << "Nepavyko atidaryti failo isvedimui." << endl;
-        meniuAntras();
-        int antrasPasirinkimas;
-        cin >> antrasPasirinkimas;
+        meniuAntras(antrasPasirinkimas);
             auto rikiavimoPradzia = chrono::high_resolution_clock::now();
             switch (antrasPasirinkimas){
                 case 1:
