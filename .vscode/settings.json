@@ -11,6 +11,7 @@
         "xiosbase": "cpp",
         "iomanip": "cpp",
         "xstring": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "string": "cpp"
     }
 }

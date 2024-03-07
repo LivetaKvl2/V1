@@ -114,7 +114,7 @@ if (b==1){
     isvalymas(studentai);
 }else { //NORIMA DUOMENIS SKAITYTI IS FAILO
 // FAILU GENERAVIMAS
-/*
+
     cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
     int studentuKiekis;
     cin >> studentuKiekis;
@@ -123,13 +123,13 @@ if (b==1){
     auto failoGeneravimoPradzia = high_resolution_clock::now();
     failuGeneravimas(studentuKiekis, failoPavadinimas.str());
     auto failoGeneravimoPabaiga = high_resolution_clock::now();
-    */
+  
 // FAILAS JAU EGZISTUOJA (TYRIMUI)
-
+/*
     int studentuKiekis = 1000;
     stringstream failoPavadinimas;
     failoPavadinimas << "studentai" << studentuKiekis << ".txt";
-    
+    */
 //NUSKAITYMAS IS FAILO  
     ifstream file;
     file.open (failoPavadinimas.str());
@@ -142,9 +142,9 @@ if (b==1){
     getline(file, line);
 
     int pazymys;
+    mok naujasStud;
     while (getline(file, line)) {
        // cout << line << endl;
-       mok naujasStud;
        istringstream iss(line);
        iss >> naujasStud.var >> naujasStud.pav;
        while (iss >> pazymys){
@@ -152,8 +152,11 @@ if (b==1){
        }
         naujasStud.eg = naujasStud.nd.back();
         naujasStud.nd.pop_back();
-
-       studentai.push_back(naujasStud);
+        studentai.push_back(naujasStud);
+        naujasStud.var.clear(); 
+        naujasStud.pav.clear(); 
+        naujasStud.nd.clear(); 
+        naujasStud.eg=0;
     }
     //NUSKAITYMAS IS FAILO BAIGTAS
     auto nuskaitymoPabaiga = high_resolution_clock::now();
@@ -211,6 +214,7 @@ if (b==1){
             cout << "KIETIAKAI: " << endl;
             isvedimas(kietiakai, cout, kl);
             auto isvedimoPabaiga = high_resolution_clock::now();
+            cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
@@ -262,7 +266,7 @@ if (b==1){
             isvedimas(vargsiukai, out1, kl);
             isvedimas(kietiakai, out2, kl);
             auto isvedimoPabaiga = high_resolution_clock::now();
-            //cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
+            cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;

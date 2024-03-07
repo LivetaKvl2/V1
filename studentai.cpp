@@ -161,8 +161,7 @@ void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok
 }
 
 void isvalymas (vector<mok>& vektorius) {
-    int clearDydis = vektorius.size();
-    for (int i = 0; i < clearDydis; i++) {
+    for (int i = 0; i < vektorius.size(); i++) {
     vektorius[i].nd.clear();
     }
     vektorius.clear();
