@@ -24,7 +24,8 @@ struct mok {
 
 void ivedimas(vector<mok>& stud);
 void calculateResults(vector<mok>& stud);
-void isvedimas(vector<mok>& stud, ostream& os);
+char rikiavimoklausimas();
+void isvedimas(vector<mok>& stud, ostream& os, char a);
 void meniu();
 void meniuAntras(int& antrasPasirinkimas);
 bool pagalVarda(const mok& a, const mok& b);

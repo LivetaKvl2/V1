@@ -37,7 +37,7 @@ if (b==1){
                     ivedimas(studentai);
                 }
                 calculateResults(studentai);
-                isvedimas(studentai, cout);
+                isvedimas(studentai, cout, rikiavimoklausimas());
             break;}
             case 2: {
                 cout << "Iveskite studentu kieki: " << endl;
@@ -68,7 +68,7 @@ if (b==1){
                 }
 
             calculateResults(studentai);
-            isvedimas(studentai, cout);
+            isvedimas(studentai, cout, rikiavimoklausimas());
             break;
             }
 
@@ -100,7 +100,7 @@ if (b==1){
                 studentai.push_back(naujasStud);
                 }
             calculateResults(studentai);
-            isvedimas(studentai, cout);
+            isvedimas(studentai, cout, rikiavimoklausimas());
             break;
             }
 
@@ -137,11 +137,9 @@ if (b==1){
         } 
         generate << endl;
     }
-}
 
-    
     ifstream file;
-    file.open (failas);
+    file.open (failoPavadinimas.str());
     if (!file){
         cout << "Nepavyko atidaryti failo." << endl;
         exit(EXIT_FAILURE);
@@ -203,7 +201,31 @@ if (b==1){
                 }
             }
             auto rikiavimoPabaiga = high_resolution_clock::now();
-            isvedimas(studentai, cout);
+            
+            vector<mok> vargsiukai;
+            vector<mok> kietiakai;
+            char a = rikiavimoklausimas();              
+            if (a == 'M' || a =='m'){
+                for (int i = 0; i < studentuKiekis; i++){
+                if (studentai[i].gal_med < 5){
+                        vargsiukai.push_back(studentai[i]);
+                }else{
+                    kietiakai.push_back(studentai[i]);
+                }
+            }   
+            }else{
+                for (int i = 0; i < studentuKiekis; i++){
+                if (studentai[i].gal_vid < 5){
+                        vargsiukai.push_back(studentai[i]);
+                }else{
+                    kietiakai.push_back(studentai[i]);
+                }
+                }
+            }
+            cout << "vargsiukai:" << endl;   
+            isvedimas(vargsiukai, cout, a);
+            cout << "kietiakai: " << endl;
+            isvedimas(kietiakai, cout, a);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
@@ -237,7 +259,8 @@ if (b==1){
                 }
             }
             auto rikiavimoPabaiga = high_resolution_clock::now();
-            isvedimas(studentai, out);
+            char a = rikiavimoklausimas();
+            isvedimas(studentai, out, a);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
@@ -245,6 +268,6 @@ if (b==1){
 
                 }
                 return 0;
-            }
+            
+     }
 }
-*/

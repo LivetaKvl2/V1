@@ -61,7 +61,7 @@ void calculateResults(vector<mok>& stud) {
     }
 }
 
-void isvedimas(vector<mok>& stud, ostream& os){
+char rikiavimoklausimas(){
     cout << "Jei norite matyti galutini rezultata apskaiciuota pagal:" << endl;
     cout << "vidurki - iveskite V" << endl;
     cout << "mediana - iveskite M"<< endl;
@@ -71,6 +71,10 @@ void isvedimas(vector<mok>& stud, ostream& os){
         cin.clear();
         cin.ignore();
     }
+    return a;
+}
+void isvedimas(vector<mok>& stud, ostream& os, char a){
+    
     if (a == 'V' || a == 'v'){
             os << left << setw(20) <<"Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
             os << "--------------------------------------------------------------" << endl;
