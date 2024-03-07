@@ -1,5 +1,0 @@
-Vardas              1Pavarde             19    7    9    7    1    3    7    3    9    4    
-Vardas              2Pavarde             21    7    3    10   10   3    9    1    8    3    
-Vardas              3Pavarde             37    3    5    8    2    5    7    10   4    1    
-Vardas              4Pavarde             410   5    1    9    5    3    3    9    7    10   
-Vardas              5Pavarde             510   6    7    2    1    7    4    4    8    10   
