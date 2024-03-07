@@ -244,7 +244,6 @@ if (b==1){
             }
             //RIKIAVIMAS BAIGTAS
             auto rikiavimoPabaiga = high_resolution_clock::now();
-            char a = rikiavimoklausimas();
             //ISVEDIMAS
             isvedimas(vargsiukai, out1, a);
             isvedimas(kietiakai, out2, a);
