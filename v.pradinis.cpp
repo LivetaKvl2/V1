@@ -107,18 +107,14 @@ if (b==1){
                 break;}
             default:{
                 cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+            }
         }
-     }
+    }while (Pasirinkimas !=4);
      //TRINAMI VEKTORIAI
-     int clearDydis = studentai.size();
-     for (int i = 0; i < clearDydis; i++) {
-     studentai[i].nd.clear();
-     }
-    studentai.clear();
-     }while (Pasirinkimas != 4);
-
+    isvalymas(studentai);
 }else { //NORIMA DUOMENIS SKAITYTI IS FAILO
 // FAILU GENERAVIMAS
+/*
     cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
     int studentuKiekis;
     cin >> studentuKiekis;
@@ -127,6 +123,13 @@ if (b==1){
     auto failoGeneravimoPradzia = high_resolution_clock::now();
     failuGeneravimas(studentuKiekis, failoPavadinimas.str());
     auto failoGeneravimoPabaiga = high_resolution_clock::now();
+    */
+// FAILAS JAU EGZISTUOJA (TYRIMUI)
+
+    int studentuKiekis = 1000;
+    stringstream failoPavadinimas;
+    failoPavadinimas << "studentai" << studentuKiekis << ".txt";
+    
 //NUSKAITYMAS IS FAILO  
     ifstream file;
     file.open (failoPavadinimas.str());
@@ -249,12 +252,16 @@ if (b==1){
             //ISVEDIMAS
             isvedimas(vargsiukai, out1, kl);
             isvedimas(kietiakai, out2, kl);
-            cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
+            //cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             out1.close();
             out2.close();
-                }          
+            isvalymas(vargsiukai);
+            isvalymas(kietiakai);
+            isvalymas(studentai);
+                }               
      }
+     
 }
