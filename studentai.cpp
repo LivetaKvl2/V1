@@ -137,3 +137,25 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas){
     }
     generate.close();
 }
+
+void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai){
+                        
+            if (a == 'M' || a =='m'){
+                for (int i = 0; i < studentuKiekis; i++){
+                if (studentai[i].gal_med < 5){
+                        vargsiukai.push_back(studentai[i]);
+                }else{
+                    kietiakai.push_back(studentai[i]);
+                }
+            }   
+            }else{
+                for (int i = 0; i < studentuKiekis; i++){
+                if (studentai[i].gal_vid < 5){
+                        vargsiukai.push_back(studentai[i]);
+                }else{
+                    kietiakai.push_back(studentai[i]);
+                }
+                }
+            }
+            
+}

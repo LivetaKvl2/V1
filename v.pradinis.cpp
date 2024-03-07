@@ -150,10 +150,12 @@ if (b==1){
 
        studentai.push_back(naujasStud);
     }
+    //NUSKAITYMAS IS FAILO BAIGTAS
     auto nuskaitymoPabaiga = high_resolution_clock::now();
     auto skaicPradzia = high_resolution_clock::now();
     calculateResults(studentai);
     auto skaicPabaiga = high_resolution_clock::now();
+    //PASIRINKIMAS, AR NORIMA, KAD DUOMENYS BUTU ISVESTI I EKRANA AR I FAILA
     cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
     int c;
     cin >> c;
@@ -163,10 +165,10 @@ if (b==1){
         cin.ignore();
         cin >> c;
     }
-    if (c==1){
+    if (c==1){ //NORIMA, KAD DUOMENYS BUTU ISVESTI EKRANE
         meniuAntras(antrasPasirinkimas);
         auto rikiavimoPradzia = high_resolution_clock::now();
-            switch (antrasPasirinkimas){
+            switch (antrasPasirinkimas){//RIKIAVIMAS
             case 1:
                 {
                     sort(studentai.begin(), studentai.end(), pagalVarda);
@@ -189,27 +191,13 @@ if (b==1){
                 }
             }
             auto rikiavimoPabaiga = high_resolution_clock::now();
-            
+            //RIKIAVIMO PABAIGA
+            //KONTEINERIU KURIMAS
             vector<mok> vargsiukai;
             vector<mok> kietiakai;
-            char a = rikiavimoklausimas();              
-            if (a == 'M' || a =='m'){
-                for (int i = 0; i < studentuKiekis; i++){
-                if (studentai[i].gal_med < 5){
-                        vargsiukai.push_back(studentai[i]);
-                }else{
-                    kietiakai.push_back(studentai[i]);
-                }
-            }   
-            }else{
-                for (int i = 0; i < studentuKiekis; i++){
-                if (studentai[i].gal_vid < 5){
-                        vargsiukai.push_back(studentai[i]);
-                }else{
-                    kietiakai.push_back(studentai[i]);
-                }
-                }
-            }
+            char a = rikiavimoklausimas();  
+            void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
+            //ISVEDIMAS I EKRANA
             cout << "vargsiukai:" << endl;   
             isvedimas(vargsiukai, cout, a);
             cout << "kietiakai: " << endl;
@@ -217,14 +205,22 @@ if (b==1){
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
-            return 0;
-            }else {
-        ofstream out ("kursiokai.txt");
-        if (!out)
+            }else {//NORIMA, KAD DUOMENYS BUTU ISVESTI I FAILUS
+        //SUKURIAMI FAILAI ISVEDIMUI
+        ofstream out1 ("Vargsiukai.txt");
+        if (!out1)
         cout << "Nepavyko atidaryti failo isvedimui." << endl;
+        ofstream out2 ("Kietiakai.txt");
+        if (!out2)
+        cout << "Nepavyko atidaryti failo isvedimui." << endl;
+        //KONTEINERIU KURIMAS
+        vector<mok> vargsiukai;
+        vector<mok> kietiakai;
+        char a = rikiavimoklausimas();  
+        void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
         meniuAntras(antrasPasirinkimas);
             auto rikiavimoPradzia = high_resolution_clock::now();
-            switch (antrasPasirinkimas){
+            switch (antrasPasirinkimas){//RIKIAVIMAS
                 case 1:
                 {
                     sort(studentai.begin(), studentai.end(), pagalVarda);
@@ -246,16 +242,17 @@ if (b==1){
                     break;
                 }
             }
+            //RIKIAVIMAS BAIGTAS
             auto rikiavimoPabaiga = high_resolution_clock::now();
             char a = rikiavimoklausimas();
-            isvedimas(studentai, out, a);
+            //ISVEDIMAS
+            isvedimas(vargsiukai, out1, a);
+            isvedimas(kietiakai, out2, a);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
-            out.close();
-
-                }
-                return 0;
-            
+            out1.close();
+            out2.close();
+                }          
      }
 }
