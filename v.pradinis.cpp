@@ -201,15 +201,21 @@ if (b==1){
             vector<mok> vargsiukai;
             vector<mok> kietiakai;
             char kl = rikiavimoklausimas();  
+            auto rusiavimoPradzia = high_resolution_clock::now();
             konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            auto rusiavimoPabaiga = high_resolution_clock::now();
             //ISVEDIMAS I EKRANA
+            auto isvedimoPradzia = high_resolution_clock::now();
             cout << "VARGSIUKAI:" << endl;   
             isvedimas(vargsiukai, cout, kl);
             cout << "KIETIAKAI: " << endl;
             isvedimas(kietiakai, cout, kl);
+            auto isvedimoPabaiga = high_resolution_clock::now();
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
+            cout << "Rusiavimas i konteinerius truko: " << trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() << " ms" << endl;
+            cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
             }else {//NORIMA, KAD DUOMENYS BUTU ISVESTI I FAILUS
         //SUKURIAMI FAILAI ISVEDIMUI
         ofstream out1 ("Vargsiukai.txt");
@@ -248,14 +254,20 @@ if (b==1){
             vector<mok> vargsiukai;
             vector<mok> kietiakai;
             char kl= rikiavimoklausimas();  
+            auto rusiavimoPradzia = high_resolution_clock::now();
             konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            auto rusiavimoPabaiga = high_resolution_clock::now();
             //ISVEDIMAS
+            auto isvedimoPradzia = high_resolution_clock::now();
             isvedimas(vargsiukai, out1, kl);
             isvedimas(kietiakai, out2, kl);
+            auto isvedimoPabaiga = high_resolution_clock::now();
             //cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
+            cout << "Rusiavimas i konteinerius truko: " << trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() << " ms" << endl;
+            cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
             out1.close();
             out2.close();
             isvalymas(vargsiukai);
