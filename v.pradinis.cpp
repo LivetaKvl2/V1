@@ -124,7 +124,9 @@ if (b==1){
     cin >> studentuKiekis;
     stringstream failoPavadinimas;
     failoPavadinimas << "studentai" << studentuKiekis << ".txt";
+    auto failoGeneravimoPradzia = high_resolution_clock::now();
     failuGeneravimas(studentuKiekis, failoPavadinimas.str());
+    auto failoGeneravimoPabaiga = high_resolution_clock::now();
 //NUSKAITYMAS IS FAILO  
     ifstream file;
     file.open (failoPavadinimas.str());
@@ -198,9 +200,9 @@ if (b==1){
             char kl = rikiavimoklausimas();  
             konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
             //ISVEDIMAS I EKRANA
-            cout << "vargsiukai:" << endl;   
+            cout << "VARGSIUKAI:" << endl;   
             isvedimas(vargsiukai, cout, kl);
-            cout << "kietiakai: " << endl;
+            cout << "KIETIAKAI: " << endl;
             isvedimas(kietiakai, cout, kl);
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
@@ -247,6 +249,7 @@ if (b==1){
             //ISVEDIMAS
             isvedimas(vargsiukai, out1, kl);
             isvedimas(kietiakai, out2, kl);
+            cout << "Failo su " << studentuKiekis << "studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: "<< trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms"<< endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
