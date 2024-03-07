@@ -120,3 +120,20 @@ milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia,high_
     auto trukme = duration_cast<milliseconds>(pabaiga - pradzia);
     return trukme;
 }
+
+void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas){
+    ofstream generate (failoPavadinimas);
+    if (!generate)
+        cout << "Nepavyko sugeneruoti failo." << endl;
+    generate << left << setw(20) << "Vardas" << left << setw(20) << "Pavarde" << left << setw(5) << "ND1" << left << setw(5) << "ND2"<< left << setw(5) << "ND3"<<
+    left << setw(5) << "ND4"<< left << setw(5) << "ND5"<< left << setw(5) << "ND6"<< left << setw(5) << "ND7"<< left << setw(5) << "ND8"<< left << setw(5) << "ND9"<< left << setw(5) << "ND10" << endl;
+    for (int i = 0; i < studentuKiekis; i++){
+        generate << left << setw(6) << "Vardas" << left << setw(14)<< i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
+        for (int j = 0; j < 10; j++){
+            int rand_paz = rand() % 10 + 1;
+            generate << left << setw(5) << rand_paz;
+        } 
+        generate << endl;
+    }
+    generate.close();
+}

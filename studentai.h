@@ -32,4 +32,5 @@ bool pagalVarda(const mok& a, const mok& b);
 bool pagalPavarde(const mok& a, const mok& b);
 bool pagalMediana(const mok& a, const mok& b);
 bool pagalVidurki(const mok& a, const mok& b);
-std::chrono::milliseconds trukmesSkaiciavimas(std::chrono::high_resolution_clock::time_point pradzia, std::chrono::high_resolution_clock::time_point pabaiga);
+milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high_resolution_clock::time_point pabaiga);
+void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
