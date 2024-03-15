@@ -121,7 +121,7 @@ if (b==1){
     stringstream failoPavadinimas;
     failoPavadinimas << "studentai" << studentuKiekis << ".txt";
     auto failoGeneravimoPradzia = high_resolution_clock::now();
-    failuGeneravimas(studentuKiekis, failoPavadinimas.str());
+   // failuGeneravimas(studentuKiekis, failoPavadinimas.str());
     auto failoGeneravimoPabaiga = high_resolution_clock::now();
   
 // FAILAS JAU EGZISTUOJA (TYRIMUI)
@@ -131,21 +131,25 @@ if (b==1){
     failoPavadinimas << "studentai" << studentuKiekis << ".txt";
     */
 //NUSKAITYMAS IS FAILO  
+       auto nuskaitymoPradzia = high_resolution_clock::now();
+
     ifstream file;
-    file.open (failoPavadinimas.str());
+    file.open(failoPavadinimas.str());
     if (!file){
         cout << "Nepavyko atidaryti failo." << endl;
         exit(EXIT_FAILURE);
     }
     string line;
-    auto nuskaitymoPradzia = high_resolution_clock::now();
     getline(file, line);
 
     int pazymys;
-    mok naujasStud;
+    int laikinas = 0;
+    studentai.reserve(studentuKiekis);
     while (getline(file, line)) {
+        istringstream iss(line);
        // cout << line << endl;
-       istringstream iss(line);
+       iss.str(line);
+       mok naujasStud;
        iss >> naujasStud.var >> naujasStud.pav;
        while (iss >> pazymys){
         naujasStud.nd.push_back(pazymys);
@@ -153,10 +157,7 @@ if (b==1){
         naujasStud.eg = naujasStud.nd.back();
         naujasStud.nd.pop_back();
         studentai.push_back(naujasStud);
-        naujasStud.var.clear(); 
-        naujasStud.pav.clear(); 
-        naujasStud.nd.clear(); 
-        naujasStud.eg=0;
+        
     }
     //NUSKAITYMAS IS FAILO BAIGTAS
     auto nuskaitymoPabaiga = high_resolution_clock::now();
@@ -256,10 +257,14 @@ if (b==1){
             auto rikiavimoPabaiga = high_resolution_clock::now();
             //KONTEINERIU KURIMAS
             vector<mok> vargsiukai;
+            vargsiukai.reserve(studentuKiekis);
             vector<mok> kietiakai;
+            kietiakai.reserve(studentuKiekis);
             char kl= rikiavimoklausimas();  
             auto rusiavimoPradzia = high_resolution_clock::now();
             konteineriai(studentuKiekis, studentai, kl, vargsiukai, kietiakai);
+            vargsiukai.shrink_to_fit();
+            kietiakai.shrink_to_fit();
             auto rusiavimoPabaiga = high_resolution_clock::now();
             //ISVEDIMAS
             auto isvedimoPradzia = high_resolution_clock::now();
