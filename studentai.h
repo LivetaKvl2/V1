@@ -6,14 +6,14 @@
 #include <algorithm>
 #include <numeric>
 #include <ctime>
-#include <fstream>
+#include "fstream"
 #include <sstream>
 #include <string>
 #include <chrono>
 #include <cstdlib>
 
 using namespace std;
-using namespace std :: chrono;
+using namespace std::chrono;
 
 struct mok {
     string var, pav;
@@ -36,3 +36,6 @@ milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
 void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
 void isvalymas(vector<mok>& vektorius);
+void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas);
+
+
