@@ -9,7 +9,7 @@ Pirmas tyrimas - generuojami failai:
 
 
 
-Antras tyrimas (su jau is anksto sugeneruotais failais:
+Antras tyrimas (su jau is anksto sugeneruotais failais):
 
 
 Tyrimas su 1000 studentu:
@@ -53,8 +53,14 @@ Tyrimas su 10000000 studentu:
 ![Screenshot 2024-03-20 122718](https://github.com/LivetaK/ObjProgLab/assets/159531709/390b90b2-bf16-4f6d-accf-f1e2a1ff0c7a)
 
 Vidurkiai:
+
 Programa, kuri dirbo su 1 000 studentu: 2989 ms;
+
 Programa, kuri dirbo su 10 000 studentu: 2493 ms;
+
 Programa, kuri dirbo su 100 000 studentu: 2893 ms;
+
 Programa, kuri dirbo su 1 000 000 studentu: 11682 ms;
+
 Programa, kuri dirbo su 10 000 000 studentu: 88764 ms;
+
