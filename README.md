@@ -1,0 +1,1 @@
+Pirmas tyrimas - generuojami failai:
