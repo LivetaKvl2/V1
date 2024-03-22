@@ -26,8 +26,8 @@ void ivedimas(vector<mok>& stud);
 void calculateResults(vector<mok>& stud);
 char rikiavimoklausimas();
 void isvedimas(vector<mok>& stud, ostream& os, char a);
-void meniu();
-void meniuAntras(int& antrasPasirinkimas);
+void meniu(int& antrasPasirinkimas);
+void meniuAntras(int& ketvirtasPasirinkimas);
 bool pagalVarda(const mok& a, const mok& b);
 bool pagalPavarde(const mok& a, const mok& b);
 bool pagalMediana(const mok& a, const mok& b);
@@ -37,5 +37,6 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
 void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
 void isvalymas(vector<mok>& vektorius);
 void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas);
-
-
+int pirmasP(int& pirmasPasirinkimas);
+int treciasP(int& treciasPasirinkimas);
+void rikiavimas(const int ketvirtaspasirinkimas, vector<mok>& studentai);
