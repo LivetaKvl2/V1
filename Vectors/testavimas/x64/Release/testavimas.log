@@ -1,0 +1,10 @@
+﻿  studentai.cpp
+C:\Users\Liveta\ObjProgLab\ObjProgLab\studentai.cpp(211,9): warning C4101: 'pazymys': unreferenced local variable
+C:\Users\Liveta\ObjProgLab\ObjProgLab\studentai.cpp(229,36): warning C4101: 'e': unreferenced local variable
+  testavimas.cpp
+C:\Users\Liveta\ObjProgLab\ObjProgLab\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 501 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  testavimas.vcxproj -> C:\Users\Liveta\ObjProgLab\ObjProgLab\x64\Release\testavimas.exe
