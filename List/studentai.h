@@ -39,4 +39,4 @@ void isvalymas(list<mok>& vektorius);
 void failuNuskaitymas(list<mok>& studentai, string& failoPavadinimas);
 int pirmasP(int& pirmasPasirinkimas);
 int treciasP(int& treciasPasirinkimas);
-void rikiavimas(const int ketvirtaspasirinkimas, list<mok>& studentai)
+void rikiavimas(const int ketvirtaspasirinkimas, list<mok>& studentai);
