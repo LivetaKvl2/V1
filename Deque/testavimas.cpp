@@ -3,7 +3,7 @@
 int main() {
     auto programosPradzia = high_resolution_clock::now();
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
-    vector<mok> studentai;
+    deque<mok> studentai;
 
     string vardai[] = { "Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana" };
     string pavardes[] = { "Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte" };
@@ -158,8 +158,8 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
-            vector<mok> kietiakai;
+            deque<mok> vargsiukai;
+            deque<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
@@ -224,8 +224,8 @@ int main() {
             //RIKIAVIMAS BAIGTAS
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
-            vector<mok> kietiakai;
+            deque<mok> vargsiukai;
+            deque<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
