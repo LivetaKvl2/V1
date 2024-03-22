@@ -120,7 +120,7 @@ int main() {
 
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
 
-        int studentuKiekis = 1000;
+        int studentuKiekis = 10000000;
         string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
 
         //NUSKAITYMAS IS FAILO
@@ -244,7 +244,7 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
             cout << "duomenys isvesti" << endl;
             cout << "--------------------------------------------------------" << endl;
-            cout << "Failo su " << studentuKiekis << " studentu rezultatai, naudojant deque:" << endl;
+            cout << "Failo su " << studentuKiekis << " studentu rezultatai, naudojant vector:" << endl;
             //cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms" << endl;
             //cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
