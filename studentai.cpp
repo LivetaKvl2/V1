@@ -40,12 +40,19 @@ void ivedimas(vector<mok>& stud) {
     stud.push_back(naujas_stud);
 }
 
-void meniu() {
+void meniu(int& antrasPasirinkimas) {
     cout << "Pasirinkite" << endl;
     cout << "1. Ivesti studentu duomenis ranka." << endl;
     cout << "2. Pazymius sugeneruoti automatiskai." << endl;
     cout << "3. Automatiskai sugeneruoti ir pazymius, ir studentu vardus, pavardes." << endl;
     cout << "4. Baigti darba." << endl;
+    cout << "Jusu pasirinkimas: ";
+    while (!(cin >> antrasPasirinkimas)) {
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        meniu(antrasPasirinkimas);
+    }
 }
 
 void calculateResults(vector<mok>& stud) {
@@ -102,7 +109,7 @@ void meniuAntras(int& antrasPasirinkimas) {
     while (!(cin >> antrasPasirinkimas) || antrasPasirinkimas < 1 || antrasPasirinkimas > 4) {
         cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
         cin.clear();
-        cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 }
 
@@ -163,33 +170,11 @@ void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok
             });
 
         vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
-        cout << "vargsiukai sorted" << endl;
         kietiakai.insert(kietiakai.end(), partitionIt, studentai.end());
-        cout << "kietiakai sorted" << endl;
     }
 
     studentai.clear();
     studentai.shrink_to_fit();
-    /*if (a == 'M' || a =='m'){
-    for (int i = 0; i < studentuKiekis; i++){
-    if (studentai[i].gal_med < 5){
-                 vargsiukai.push_back(studentai[i]);
-         }else{
-             kietiakai.push_back(studentai[i]);
-         }
-     }   
-     }else{
-         for (auto& student : studentai){
-             if (student.gal_vid < 5){
-                     vargsiukai.push_back(student);
-                     studentai.nd.clear();
-                     studentai[i].delete();
-             }else{
-                 kietiakai.push_back(studentai[i]);
-             }
-         }
-     }*/
-
 }
 
 void isvalymas(vector<mok>& vektorius) {
@@ -198,7 +183,7 @@ void isvalymas(vector<mok>& vektorius) {
     }
     vektorius.clear();
 }
-void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas){
+void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
     ifstream file;
     do {
         file.open(failoPavadinimas);
@@ -207,35 +192,80 @@ void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas){
             cin >> failoPavadinimas;
         }
     } while (!file.is_open());
-    
+
     int pazymys;
     int laikinas = 0;
-    auto start = std::chrono::high_resolution_clock::now();
-    cout << "---------------------------------------------------------" << endl;
     string line;
     istringstream iss;
     string grade = "";
-    getline(file, line); // nereikalingas line'as pasalinamas
+    getline(file, line);
     while (getline(file, line)) {
         iss.str(line);
-        mok laikinasMok;
-        iss >> laikinasMok.var >> laikinasMok.pav;
+        mok laikinasstud;
+        iss >> laikinasstud.var >> laikinasstud.pav;
         while (iss >> grade) {
             try {
                 if (stoi(grade) >= 0 && stoi(grade) <= 10) {
-                    laikinasMok.nd.push_back(std::stoi(grade));
+                    laikinasstud.nd.push_back(std::stoi(grade));
                 }
             }
             catch (std::exception& e) {
 
             }
         }
-        laikinasMok.eg = laikinasMok.nd.back();
-        laikinasMok.nd.pop_back();
-        studentai.push_back(laikinasMok);
+        laikinasstud.eg = laikinasstud.nd.back();
+        laikinasstud.nd.pop_back();
+        studentai.push_back(laikinasstud);
         iss.clear();
 
     }
     file.close();
 }
+int pirmasP(int& pirmasPasirinkimas) {
+    cout << "Jei norite duomenis ivesti ranka, iveskite 1, jei norite, kad duomenys butu nuskaityti is failo, iveskite 2" << endl;
+    cin >> pirmasPasirinkimas;
+    while (!(pirmasPasirinkimas == 1 || pirmasPasirinkimas == 2)) {
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin >> pirmasPasirinkimas;
+    }
+    return pirmasPasirinkimas;
+}
 
+int treciasP(int& treciasPasirinkimas) {
+    cout << "jei norite, kad duomenys butu isvesti ekrane, iveskite 1, jei i faila, iveskite 2" << endl;
+    cin >> treciasPasirinkimas;
+    while (!(treciasPasirinkimas == 1 || treciasPasirinkimas == 2)) {
+        cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
+        cin.clear();
+        cin.ignore();
+        cin >> treciasPasirinkimas;
+    }
+    return treciasPasirinkimas;
+}
+
+void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {
+    switch (ketvirtasPasirinkimas) {//RIKIAVIMAS
+    case 1:
+    {
+        sort(studentai.begin(), studentai.end(), pagalVarda);
+        break;
+    }
+    case 2:
+    {
+        sort(studentai.begin(), studentai.end(), pagalPavarde);
+        break;
+    }
+    case 3:
+    {
+        sort(studentai.begin(), studentai.end(), pagalVidurki);
+        break;
+    }
+    case 4:
+    {
+        sort(studentai.begin(), studentai.end(), pagalMediana);
+        break;
+    }
+    }
+}
