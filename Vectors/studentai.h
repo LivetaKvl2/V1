@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <iostream>
@@ -11,21 +12,22 @@
 #include <string>
 #include <chrono>
 #include <cstdlib>
+#include <deque>
 
 using namespace std;
 using namespace std::chrono;
 
 struct mok {
     string var, pav;
-    vector<int> nd;
+    deque<int> nd;
     int eg;
     double gal_vid, gal_med;
 };
 
-void ivedimas(vector<mok>& stud);
-void calculateResults(vector<mok>& stud);
+void ivedimas(deque<mok>& stud);
+void calculateResults(deque<mok>& stud);
 char rikiavimoklausimas();
-void isvedimas(vector<mok>& stud, ostream& os, char a);
+void isvedimas(deque<mok>& stud, ostream& os, char a);
 void meniu(int& antrasPasirinkimas);
 void meniuAntras(int& ketvirtasPasirinkimas);
 bool pagalVarda(const mok& a, const mok& b);
@@ -34,9 +36,9 @@ bool pagalMediana(const mok& a, const mok& b);
 bool pagalVidurki(const mok& a, const mok& b);
 milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high_resolution_clock::time_point pabaiga);
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
-void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai);
-void isvalymas(vector<mok>& vektorius);
-void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas);
+void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai, deque<mok>& kietiakai);
+void isvalymas(deque<mok>& vektorius);
+void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas);
 int pirmasP(int& pirmasPasirinkimas);
 int treciasP(int& treciasPasirinkimas);
-void rikiavimas(const int ketvirtaspasirinkimas, vector<mok>& studentai);
+void rikiavimas(const int ketvirtaspasirinkimas, deque<mok>& studentai);

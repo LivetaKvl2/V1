@@ -1,7 +1,7 @@
 #include "studentai.h"
 
 
-void ivedimas(vector<mok>& stud) {
+void ivedimas(deque<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;
     cin >> naujas_stud.var >> naujas_stud.pav;
@@ -55,7 +55,7 @@ void meniu(int& antrasPasirinkimas) {
     }
 }
 
-void calculateResults(vector<mok>& stud) {
+void calculateResults(deque<mok>& stud) {
 
     for (int i = 0; i < stud.size(); i++) {
         double sum = accumulate(stud[i].nd.begin(), stud[i].nd.end(), 0.0);
@@ -83,7 +83,7 @@ char rikiavimoklausimas() {
     }
     return a;
 }
-void isvedimas(vector<mok>& stud, ostream& os, char a) {
+void isvedimas(deque<mok>& stud, ostream& os, char a) {
 
     if (a == 'V' || a == 'v') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
@@ -133,27 +133,26 @@ milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high
 
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
     ofstream generate(failoPavadinimas);
-    if (!generate) {
-        cout << "Nepavyko sugeneruoti failo." << endl;
-    }
-    else {
-        generate << left << setw(20) << "Vardas" << left << setw(20) << "Pavarde" << left << setw(5) << "ND1" << left << setw(5) << "ND2" << left << setw(5) << "ND3" <<
-            left << setw(5) << "ND4" << left << setw(5) << "ND5" << left << setw(5) << "ND6" << left << setw(5) << "ND7" << left << setw(5) << "ND8" << left << setw(5) << "ND9"
-            << left << setw(5) << "ND10" << left << setw(5) << "Eg." << endl;
-        for (int i = 0; i < studentuKiekis; i++) {
-            generate << left << setw(6) << "Vardas" << left << setw(14) << i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
-            for (int j = 0; j < 10; j++) {
-                int rand_paz = rand() % 10 + 1;
-                generate << left << setw(5) << rand_paz;
-            }
-            int rand_eg = rand() % 10 + 1;
-            generate << left << setw(5) << rand_eg << endl;
+    stringstream Stud;
+    Stud << left << setw(20) << "Vardas" << left << setw(20) << "Pavarde" << left << setw(5) << "ND1" << left << setw(5) << "ND2" << left << setw(5) << "ND3" <<
+        left << setw(5) << "ND4" << left << setw(5) << "ND5" << left << setw(5) << "ND6" << left << setw(5) << "ND7" << left << setw(5) << "ND8" << left << setw(5) << "ND9"
+        << left << setw(5) << "ND10" << left << setw(5) << "Eg." << endl;
+
+    for (int i = 0; i < studentuKiekis; i++) {
+        Stud << left << setw(6) << "Vardas" << left << setw(14) << i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
+        for (int j = 0; j < 10; j++) {
+            int rand_paz = rand() % 10 + 1;
+            Stud << left << setw(5) << rand_paz;
         }
-        generate.close();
+        int rand_eg = rand() % 10 + 1;
+        Stud << left << setw(5) << rand_eg << endl;
     }
+    generate << Stud.str();
+    generate.close();
+    Stud.str("");
 }
 
-void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai) {
+void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai, deque<mok>& kietiakai) {
     if (a == 'M' || a == 'm') {
         auto partitionIt = partition(studentai.begin(), studentai.end(),
             [](const mok& student) {
@@ -177,13 +176,13 @@ void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok
     studentai.shrink_to_fit();
 }
 
-void isvalymas(vector<mok>& vektorius) {
+void isvalymas(deque<mok>& vektorius) {
     for (int i = 0; i < vektorius.size(); i++) {
         vektorius[i].nd.clear();
     }
     vektorius.clear();
 }
-void failuNuskaitymas(vector<mok>& studentai, string& failoPavadinimas) {
+void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas) {
     ifstream file;
     do {
         file.open(failoPavadinimas);
@@ -245,7 +244,7 @@ int treciasP(int& treciasPasirinkimas) {
     return treciasPasirinkimas;
 }
 
-void rikiavimas(int ketvirtasPasirinkimas, vector<mok>& studentai) {
+void rikiavimas(int ketvirtasPasirinkimas, deque<mok>& studentai) {
     switch (ketvirtasPasirinkimas) {//RIKIAVIMAS
     case 1:
     {
