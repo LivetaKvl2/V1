@@ -1,9 +1,8 @@
 #include "studentai.h"
 
 int main() {
-    auto programosPradzia = high_resolution_clock::now();
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
-    vector<mok> studentai;
+    deque<mok> studentai;
 
     string vardai[] = { "Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana" };
     string pavardes[] = { "Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte" };
@@ -104,7 +103,7 @@ int main() {
     else { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
         // FAILU GENERAVIMAS
-        cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
+        /*cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
         int studentuKiekis;
         while (!(cin >> studentuKiekis) || studentuKiekis < 0) {
             cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -117,13 +116,14 @@ int main() {
         auto failoGeneravimoPabaiga = high_resolution_clock::now();
         cout << "--------------------------------------------------------" << endl;
         cout << "failas sugeneruotas" << endl;
-        cout << "--------------------------------------------------------" << endl;
+        cout << "--------------------------------------------------------" << endl;*/
+
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
-        /*
-            int studentuKiekis = 1000;
-            string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
-        */
-        //NUSKAITYMAS IS FAILO  
+
+        int studentuKiekis = 10000000;
+        string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
+
+        //NUSKAITYMAS IS FAILO
         auto nuskaitymoPradzia = high_resolution_clock::now();
         failuNuskaitymas(studentai, failoPavadinimas);
         auto nuskaitymoPabaiga = high_resolution_clock::now();
@@ -158,8 +158,8 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
-            vector<mok> kietiakai;
+            deque<mok> vargsiukai;
+            deque<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
@@ -186,16 +186,14 @@ int main() {
 
             auto isvedimoPabaiga = high_resolution_clock::now();
 
-            auto programosPabaiga = high_resolution_clock::now();
-
-            cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
+            //cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms" << endl;
             cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             cout << "Rusiavimas i konteinerius truko: " << trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() << " ms" << endl;
             cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
             cout << endl;
-            cout << "Programa truko: " << trukmesSkaiciavimas(programosPradzia, programosPabaiga).count() << "ms" << endl;
+            cout << "Programa truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() + trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() + trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() + trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() + trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << "ms" << endl;
         }
         else {//NORIMA, KAD DUOMENYS BUTU ISVESTI I FAILUS
 
@@ -224,8 +222,8 @@ int main() {
             //RIKIAVIMAS BAIGTAS
 
             //KONTEINERIU KURIMAS
-            vector<mok> vargsiukai;
-            vector<mok> kietiakai;
+            deque<mok> vargsiukai;
+            deque<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
@@ -246,22 +244,21 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
             cout << "duomenys isvesti" << endl;
             cout << "--------------------------------------------------------" << endl;
-            cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
+            cout << "Failo su " << studentuKiekis << " studentu rezultatai, naudojant deque:" << endl;
+            //cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms" << endl;
-            cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
+            //cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             cout << "Rusiavimas i konteinerius truko: " << trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() << " ms" << endl;
-            cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
+            //cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
+            cout << endl;
+            //cout << "Programa truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() + trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() + trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() + trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() + trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << "ms" << endl;
 
             out1.close();
             out2.close();
             isvalymas(vargsiukai);
             isvalymas(kietiakai);
             isvalymas(studentai);
-
-            auto programosPabaiga = high_resolution_clock::now();
-            cout << endl;
-            cout << "Programa truko: " << trukmesSkaiciavimas(programosPradzia, programosPabaiga).count() << "ms" << endl;
         }
     }
 
