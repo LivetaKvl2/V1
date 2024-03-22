@@ -1,7 +1,7 @@
 #include "studentai.h"
 
 
-void ivedimas(deque<mok>& stud) {
+void ivedimas(list<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;
     cin >> naujas_stud.var >> naujas_stud.pav;
@@ -55,18 +55,21 @@ void meniu(int& antrasPasirinkimas) {
     }
 }
 
-void calculateResults(deque<mok>& stud) {
+void calculateResults(list<mok>& stud) {
 
-    for (int i = 0; i < stud.size(); i++) {
-        double sum = accumulate(stud[i].nd.begin(), stud[i].nd.end(), 0.0);
-        double vid = sum / stud[i].nd.size();
-        stud[i].gal_vid = (0.4 * vid + 0.6 * stud[i].eg);
-        sort(stud[i].nd.begin(), stud[i].nd.end());
-        if (stud[i].nd.size() % 2 == 0) {
-            stud[i].gal_med = ((stud[i].nd[stud[i].nd.size() / 2 - 1] + stud[i].nd[stud[i].nd.size() / 2]) / 2.0 * 0.4) + 0.6 * stud[i].eg;
+    for (auto i = stud.begin(); i != stud.end(); i++) {
+        double sum = accumulate(i->nd.begin(), i->nd.end(), 0.0);
+        double vid = sum / i->nd.size();
+        i->gal_vid = (0.4 * vid + 0.6 * i->eg);
+        sort(i->nd.begin(), i->nd.end());
+        if (i->nd.size() % 2 == 0) {
+            auto v1 = next(i->nd.begin(), i->nd.size() / 2 - 1);
+            auto v2 = next(i->nd.begin(), i->nd.size() / 2);
+            i->gal_med = ((*v1 + *v2) / 2.0 * 0.4) + 0.6 * i->eg;
         }
         else {
-            stud[i].gal_med = (stud[i].nd[stud[i].nd.size() / 2] * 0.4) + (0.6 * stud[i].eg);
+            auto middle = next(i->nd.begin(), i->nd.size() / 2);
+            i->gal_med = (*middle * 0.4) + (0.6 * i->eg);
         }
     }
 }
@@ -83,19 +86,19 @@ char rikiavimoklausimas() {
     }
     return a;
 }
-void isvedimas(deque<mok>& stud, ostream& os, char a) {
+void isvedimas(list<mok>& stud, ostream& os, char a) {
 
     if (a == 'V' || a == 'v') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
         os << "--------------------------------------------------------------" << endl;
-        for (int i = 0; i < stud.size(); i++) {
-            os << left << setw(20) << stud[i].var << setw(20) << stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_vid << endl;
+        for (auto i = stud.begin(); i != stud.end(); i++) {
+            os << left << setw(20) << i->var << setw(20) << i->pav << setw(20) << fixed << setprecision(2) << i->gal_vid << endl;
         }
     } if (a == 'M' || a == 'm') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Med.)" << endl;
         os << "--------------------------------------------------------------" << endl;
-        for (int i = 0; i < stud.size(); i++) {
-            os << left << setw(20) << stud[i].var << setw(20) << stud[i].pav << setw(20) << fixed << setprecision(2) << stud[i].gal_med << endl;
+        for (auto i = stud.begin(); i != stud.end(); i++) {
+            os << left << setw(20) << i->var << setw(20) << i->pav << setw(20) << fixed << setprecision(2) << i->gal_med << endl;
         }
     }
 }
@@ -152,7 +155,7 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
     Stud.str("");
 }
 
-void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai, deque<mok>& kietiakai) {
+void konteineriai(int studentuKiekis, list<mok>& studentai, char a, list<mok>& vargsiukai, list<mok>& kietiakai) {
     if (a == 'M' || a == 'm') {
         auto partitionIt = partition(studentai.begin(), studentai.end(),
             [](const mok& student) {
@@ -173,16 +176,15 @@ void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>&
     }
 
     studentai.clear();
-    studentai.shrink_to_fit();
 }
 
-void isvalymas(deque<mok>& vektorius) {
-    for (int i = 0; i < vektorius.size(); i++) {
-        vektorius[i].nd.clear();
+void isvalymas(list<mok>& vektorius) {
+    for (auto i = vektorius.begin(); i != vektorius.end(); i++) {
+        i->nd.clear();
     }
     vektorius.clear();
 }
-void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas) {
+void failuNuskaitymas(list<mok>& studentai, string& failoPavadinimas) {
     ifstream file;
     do {
         file.open(failoPavadinimas);
@@ -244,7 +246,7 @@ int treciasP(int& treciasPasirinkimas) {
     return treciasPasirinkimas;
 }
 
-void rikiavimas(int ketvirtasPasirinkimas, deque<mok>& studentai) {
+void rikiavimas(int ketvirtasPasirinkimas, list<mok>& studentai) {
     switch (ketvirtasPasirinkimas) {//RIKIAVIMAS
     case 1:
     {
