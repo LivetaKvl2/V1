@@ -250,22 +250,22 @@ void rikiavimas(int ketvirtasPasirinkimas, list<mok>& studentai) {
     switch (ketvirtasPasirinkimas) {//RIKIAVIMAS
     case 1:
     {
-        sort(studentai.begin(), studentai.end(), pagalVarda);
+        studentai.sort(pagalVarda);
         break;
     }
     case 2:
     {
-        sort(studentai.begin(), studentai.end(), pagalPavarde);
+        studentai.sort(pagalPavarde);
         break;
     }
     case 3:
     {
-        sort(studentai.begin(), studentai.end(), pagalVidurki);
+        studentai.sort(pagalMediana);
         break;
     }
     case 4:
     {
-        sort(studentai.begin(), studentai.end(), pagalMediana);
+        studentai.sort(pagalVidurki);
         break;
     }
     }
