@@ -2,7 +2,7 @@
 
 int main() {
     int pirmasPasirinkimas, antrasPasirinkimas, treciasPasirinkimas, ketvirtasPasirinkimas, n;
-    deque<mok> studentai;
+    vector<mok> studentai;
 
     string vardai[] = { "Liveta", "Roberta", "Paulina", "Ugne", "Gabriele", "Kamile", "Marija", "Rugile", "Jovita", "Adriana" };
     string pavardes[] = { "Kavaliauskaite", "Jurpalyte", "Podgaiska", "Mockute", "Vaitiekute", "Zobelaite", "Zubareva", "Macaite", "Vencauskaite", "Sirokyte" };
@@ -158,8 +158,8 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
 
             //KONTEINERIU KURIMAS
-            deque<mok> vargsiukai;
-            deque<mok> kietiakai;
+            vector<mok> vargsiukai;
+            vector<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
@@ -222,8 +222,8 @@ int main() {
             //RIKIAVIMAS BAIGTAS
 
             //KONTEINERIU KURIMAS
-            deque<mok> vargsiukai;
-            deque<mok> kietiakai;
+            vector<mok> vargsiukai;
+            vector<mok> kietiakai;
 
             char kl = rikiavimoklausimas();
 
