@@ -127,11 +127,48 @@ Tyrimas su 10 000 000 studentu:
 
 
 REZULTATAI SU VECTORS:
+
+
 Tyrimas su 1 000 studentu:
+
+
+![Screenshot 2024-03-22 202532](https://github.com/LivetaK/ObjProgLab/assets/159531709/9adf0145-5704-4ae6-9c14-0b44ff7c1e65)
+![Screenshot 2024-03-22 202508](https://github.com/LivetaK/ObjProgLab/assets/159531709/0bcf6a61-8ead-4fc3-9a1c-9d4f7a6328e6)
+![Screenshot 2024-03-22 202420](https://github.com/LivetaK/ObjProgLab/assets/159531709/cbbacf13-4043-4a8f-9cd3-fd0909df0805)
+
+
 Tyrimas su 10 000 studentu:
+
+
+![Screenshot 2024-03-22 202802](https://github.com/LivetaK/ObjProgLab/assets/159531709/76e010d2-a36a-42d3-85bf-c4407857d408)
+![Screenshot 2024-03-22 202751](https://github.com/LivetaK/ObjProgLab/assets/159531709/36b8f1c9-42f5-4b64-bc71-b832dc628086)
+![Screenshot 2024-03-22 202740](https://github.com/LivetaK/ObjProgLab/assets/159531709/b82b1ddf-c22f-4247-9020-5b06669c7b43)
+
+
 Tyrimas su 100 000 studentu:
+
+
+![Screenshot 2024-03-22 202908](https://github.com/LivetaK/ObjProgLab/assets/159531709/f15b92b1-f3bd-426a-88c9-41a543101f6a)
+![Screenshot 2024-03-22 202853](https://github.com/LivetaK/ObjProgLab/assets/159531709/810d63b9-c0c1-447c-90cd-7fde768b86a6)
+![Screenshot 2024-03-22 202836](https://github.com/LivetaK/ObjProgLab/assets/159531709/53835662-8c9a-41b1-9186-c05f6bf056a7)
+
+
 Tyrimas su 1 000 000 studentu:
+
+
+![Screenshot 2024-03-22 203118](https://github.com/LivetaK/ObjProgLab/assets/159531709/366973b0-c619-47fa-925c-58e5378598b9)
+![Screenshot 2024-03-22 203058](https://github.com/LivetaK/ObjProgLab/assets/159531709/59b781c7-a875-4884-baa2-33b88053d1c3)
+![Screenshot 2024-03-22 203034](https://github.com/LivetaK/ObjProgLab/assets/159531709/ec365ec8-85a9-4af9-8c7b-4a1de5ff2f4a)
+
+
 Tyrimas su 10 000 000 studentu:
+
+
+![Screenshot 2024-03-22 203755](https://github.com/LivetaK/ObjProgLab/assets/159531709/ab7cabbc-190a-4a82-b800-ee652a18a40e)
+![Screenshot 2024-03-22 203543](https://github.com/LivetaK/ObjProgLab/assets/159531709/9e0d67e6-a1d0-45dc-a34d-233f473841c6)
+![Screenshot 2024-03-22 203335](https://github.com/LivetaK/ObjProgLab/assets/159531709/c2d1ab03-a234-41c2-8783-6fcc3bfa3590)
+
+
 
 REZULTATAI SU LIST:
 Tyrimas su 1 000 studentu:
