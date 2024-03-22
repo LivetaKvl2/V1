@@ -133,23 +133,23 @@ milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high
 
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
     ofstream generate(failoPavadinimas);
-    stringstream naujasStud;
-    naujasStud << left << setw(20) << "Vardas" << left << setw(20) << "Pavarde" << left << setw(5) << "ND1" << left << setw(5) << "ND2" << left << setw(5) << "ND3" <<
+    stringstream Stud;
+    Stud << left << setw(20) << "Vardas" << left << setw(20) << "Pavarde" << left << setw(5) << "ND1" << left << setw(5) << "ND2" << left << setw(5) << "ND3" <<
             left << setw(5) << "ND4" << left << setw(5) << "ND5" << left << setw(5) << "ND6" << left << setw(5) << "ND7" << left << setw(5) << "ND8" << left << setw(5) << "ND9"
             << left << setw(5) << "ND10" << left << setw(5) << "Eg." << endl;
 
         for (int i = 0; i < studentuKiekis; i++) {
-            naujasStud << left << setw(6) << "Vardas" << left << setw(14) << i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
+            Stud << left << setw(6) << "Vardas" << left << setw(14) << i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
             for (int j = 0; j < 10; j++) {
                 int rand_paz = rand() % 10 + 1;
-                naujasStud << left << setw(5) << rand_paz;
+                Stud << left << setw(5) << rand_paz;
             }
             int rand_eg = rand() % 10 + 1;
-            naujasStud << left << setw(5) << rand_eg << endl;
+            Stud << left << setw(5) << rand_eg << endl;
         }
-        generate << naujasStud.str();
+        generate << Stud.str();
         generate.close();
-        naujasStud.str("");
+        Stud.str("");
 }
 
 void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai, deque<mok>& kietiakai) {

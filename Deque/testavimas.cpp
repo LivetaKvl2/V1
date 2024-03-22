@@ -103,7 +103,7 @@ int main() {
     else { //NORIMA DUOMENIS SKAITYTI IS FAILO
 
         // FAILU GENERAVIMAS
-       /* cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
+        /*cout << "Kiek studentu norite, kad programa sugeneruotu?" << endl;
         int studentuKiekis;
         while (!(cin >> studentuKiekis) || studentuKiekis < 0) {
             cout << "Neteisinga ivestis, bandykite dar karta" << endl;
@@ -120,7 +120,7 @@ int main() {
 
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
         
-            int studentuKiekis = 1000;
+            int studentuKiekis = 10000000;
             string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
         
         //NUSKAITYMAS IS FAILO  
@@ -244,14 +244,15 @@ int main() {
             cout << "--------------------------------------------------------" << endl;
             cout << "duomenys isvesti" << endl;
             cout << "--------------------------------------------------------" << endl;
+            cout << "Failo su " << studentuKiekis << " studentu rezultatai, naudojant deque:" << endl;
             //cout << "Failo su " << studentuKiekis << " studentu generavimas truko: " << trukmesSkaiciavimas(failoGeneravimoPradzia, failoGeneravimoPabaiga).count() << " ms" << endl;
             cout << "Nuskaitymas truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() << " ms" << endl;
-            cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
+            //cout << "Skaiciavimas truko: " << trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() << " ms" << endl;
             cout << "Rikiavimas truko: " << trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() << " ms" << endl;
             cout << "Rusiavimas i konteinerius truko: " << trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() << " ms" << endl;
-            cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
+            //cout << "Isvedimas truko: " << trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << " ms" << endl;
             cout << endl;
-            cout << "Programa truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() + trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() + trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() + trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() + trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << "ms" << endl;
+            //cout << "Programa truko: " << trukmesSkaiciavimas(nuskaitymoPradzia, nuskaitymoPabaiga).count() + trukmesSkaiciavimas(skaicPradzia, skaicPabaiga).count() + trukmesSkaiciavimas(rikiavimoPradzia, rikiavimoPabaiga).count() + trukmesSkaiciavimas(rusiavimoPradzia, rusiavimoPabaiga).count() + trukmesSkaiciavimas(isvedimoPradzia, isvedimoPabaiga).count() << "ms" << endl;
             
             out1.close();
             out2.close();
