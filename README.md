@@ -1,3 +1,8 @@
+---------------------------------------------------------
+v0.4:
+---------------------------------------------------------
+
+
 Pirmas tyrimas - generuojami failai:
 
 
@@ -63,4 +68,82 @@ Programa, kuri dirbo su 100 000 studentu: 2893 ms;
 Programa, kuri dirbo su 1 000 000 studentu: 11682 ms;
 
 Programa, kuri dirbo su 10 000 000 studentu: 88764 ms;
+
+---------------------------------------------------------
+
+V1.0:
+
+---------------------------------------------------------
+Testavimo sistemos parametrai:
+![Screenshot 2024-03-22 200611](https://github.com/LivetaK/ObjProgLab/assets/159531709/d4f0758b-1db6-4713-8b33-70aa780d6a02)
+
+
+*********************************************************
+
+PIRMA TESTAVIMO DALIS 
+
+*********************************************************
+
+REZULTATAI SU DEQUE:
+
+Tyrimas su 1 000 studentu:
+
+
+![Screenshot 2024-03-22 193720](https://github.com/LivetaK/ObjProgLab/assets/159531709/d73580b1-d45b-4575-963f-9537d4607b5e)
+![Screenshot 2024-03-22 193741](https://github.com/LivetaK/ObjProgLab/assets/159531709/7eb628b8-1946-41f3-bc18-5b13c02f67d3)
+![Screenshot 2024-03-22 193755](https://github.com/LivetaK/ObjProgLab/assets/159531709/7b8fdd0a-a45b-45e9-946c-7aeee2fff358)
+
+
+Tyrimas su 10 000 studentu:
+
+
+![Screenshot 2024-03-22 193934](https://github.com/LivetaK/ObjProgLab/assets/159531709/d34605c5-441e-42a9-ba30-86c19b8bed03)
+![Screenshot 2024-03-22 193948](https://github.com/LivetaK/ObjProgLab/assets/159531709/cf4f0ffc-b2cb-4972-8def-8a2b6428b77d)
+![Screenshot 2024-03-22 194001](https://github.com/LivetaK/ObjProgLab/assets/159531709/7980829e-1e05-4041-b4ef-ee4c6489c634)
+
+
+Tyrimas su 100 000 studentu:
+
+
+![Screenshot 2024-03-22 194102](https://github.com/LivetaK/ObjProgLab/assets/159531709/1a944064-1ecd-443f-aaf8-fee9159f1089)
+![Screenshot 2024-03-22 194049](https://github.com/LivetaK/ObjProgLab/assets/159531709/adac0415-a1ed-49c9-a755-defffe935524)
+![Screenshot 2024-03-22 194036](https://github.com/LivetaK/ObjProgLab/assets/159531709/c8850570-dd49-4629-8dcd-f65a0be861bb)
+
+
+Tyrimas su 1 000 000 studentu:
+
+
+![Screenshot 2024-03-22 194246](https://github.com/LivetaK/ObjProgLab/assets/159531709/e5993863-2626-4d6d-9f58-e8a0fbf8bfe3)
+![Screenshot 2024-03-22 194219](https://github.com/LivetaK/ObjProgLab/assets/159531709/10785fe1-abe6-46a8-bc56-afb838e530e3)
+![Screenshot 2024-03-22 194154](https://github.com/LivetaK/ObjProgLab/assets/159531709/ef02d105-1078-4319-9519-ab9cd9d8dd68)
+
+
+Tyrimas su 10 000 000 studentu:
+
+
+![Screenshot 2024-03-22 195155](https://github.com/LivetaK/ObjProgLab/assets/159531709/cc12e404-e535-4f0a-a61e-8e2eaacfd789)
+![Screenshot 2024-03-22 194929](https://github.com/LivetaK/ObjProgLab/assets/159531709/7fbd1708-e8f1-4373-a125-9a3d1bccc989)
+![Screenshot 2024-03-22 194610](https://github.com/LivetaK/ObjProgLab/assets/159531709/942696f1-0245-445e-a311-575fc6ed92d9)
+
+
+REZULTATAI SU VECTORS:
+Tyrimas su 1 000 studentu:
+Tyrimas su 10 000 studentu:
+Tyrimas su 100 000 studentu:
+Tyrimas su 1 000 000 studentu:
+Tyrimas su 10 000 000 studentu:
+
+REZULTATAI SU LIST:
+Tyrimas su 1 000 studentu:
+Tyrimas su 10 000 studentu:
+Tyrimas su 100 000 studentu:
+Tyrimas su 1 000 000 studentu:
+Tyrimas su 10 000 000 studentu:
+
+*********************************************************
+
+ANTRA TESTAVIMO DALIS 
+
+*********************************************************
+
 
