@@ -157,25 +157,21 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
 
 void konteineriai(int studentuKiekis, list<mok>& studentai, char a, list<mok>& vargsiukai, list<mok>& kietiakai) {
     if (a == 'M' || a == 'm') {
-        auto partitionIt = partition(studentai.begin(), studentai.end(),
-            [](const mok& student) {
-                return student.gal_med < 5;
-            });
-
-        vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
-        kietiakai.insert(kietiakai.end(), partitionIt, studentai.end());
+        for (auto& student: studentai) {
+            if (student.gal_med < 5) {
+                vargsiukai.push_back(student);
+            }
+            else kietiakai.push_back(student);
+        }
     }
     else {
-        auto partitionIt = partition(studentai.begin(), studentai.end(),
-            [](const mok& student) {
-                return student.gal_vid < 5;
-            });
-
-        vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
-        kietiakai.insert(kietiakai.end(), partitionIt, studentai.end());
+        for (auto& student : studentai) {
+            if (student.gal_vid < 5) {
+                vargsiukai.push_back(student);
+            }
+            else kietiakai.push_back(student);
+        }
     }
-
-    studentai.clear();
 }
 
 void isvalymas(list<mok>& vektorius) {
