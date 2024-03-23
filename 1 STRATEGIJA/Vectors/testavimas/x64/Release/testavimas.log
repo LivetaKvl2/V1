@@ -1,8 +1,11 @@
-﻿  testavimas.cpp
-C:\Users\Liveta\opld\Vectors\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  studentai.cpp
+C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\studentai.cpp(190,9): warning C4101: 'pazymys': unreferenced local variable
+C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\studentai.cpp(206,36): warning C4101: 'e': unreferenced local variable
+  testavimas.cpp
+C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating code
-  4 of 506 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+  472 of 484 functions (97.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  testavimas.vcxproj -> C:\Users\Liveta\opld\Vectors\x64\Release\testavimas.exe
+  testavimas.vcxproj -> C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\x64\Release\testavimas.exe
