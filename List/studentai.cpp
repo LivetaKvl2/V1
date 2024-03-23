@@ -61,7 +61,7 @@ void calculateResults(list<mok>& stud) {
         double sum = accumulate(i->nd.begin(), i->nd.end(), 0.0);
         double vid = sum / i->nd.size();
         i->gal_vid = (0.4 * vid + 0.6 * i->eg);
-        sort(i->nd.begin(), i->nd.end());
+        i->nd.sort();
         if (i->nd.size() % 2 == 0) {
             auto v1 = next(i->nd.begin(), i->nd.size() / 2 - 1);
             auto v2 = next(i->nd.begin(), i->nd.size() / 2);
@@ -141,7 +141,7 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
         left << setw(5) << "ND4" << left << setw(5) << "ND5" << left << setw(5) << "ND6" << left << setw(5) << "ND7" << left << setw(5) << "ND8" << left << setw(5) << "ND9"
         << left << setw(5) << "ND10" << left << setw(5) << "Eg." << endl;
 
-    for (int i = 0; i < studentuKiekis; i++) {
+    for (int i = 0; i < studentuKiekis; ++i) {
         Stud << left << setw(6) << "Vardas" << left << setw(14) << i + 1 << left << setw(7) << "Pavarde" << left << setw(13) << i + 1;
         for (int j = 0; j < 10; j++) {
             int rand_paz = rand() % 10 + 1;
@@ -179,7 +179,7 @@ void konteineriai(int studentuKiekis, list<mok>& studentai, char a, list<mok>& v
 }
 
 void isvalymas(list<mok>& vektorius) {
-    for (auto i = vektorius.begin(); i != vektorius.end(); i++) {
+    for (auto i = vektorius.begin(); i != vektorius.end(); ++i) {
         i->nd.clear();
     }
     vektorius.clear();
