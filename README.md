@@ -259,6 +259,11 @@ list
 ![Screenshot 2024-03-23 135903](https://github.com/LivetaK/ObjProgLab/assets/159531709/09862ed5-8489-4f08-94f8-039bcf29cf2c)
 
 
+apibendrintai:
+
+
+![Screenshot 2024-03-23 191527](https://github.com/LivetaK/ObjProgLab/assets/159531709/1b238b4c-1ad4-4b5e-97b4-19e1bc07be34)
+
 
 2 STRATEGIJA
 
