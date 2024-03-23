@@ -120,7 +120,7 @@ int main() {
 
         // FAILAS JAU EGZISTUOJA (TYRIMUI)
         
-            int studentuKiekis = 1000;
+            int studentuKiekis = 10000000;
             string failoPavadinimas = "studentai" + to_string(studentuKiekis) + ".txt";
         
         //NUSKAITYMAS IS FAILO  
