@@ -226,3 +226,56 @@ ANTRA TESTAVIMO DALIS
 *********************************************************
 
 
+1 STRATEGIJA:
+
+
+vectors
+
+
+![Screenshot 2024-03-23 134011](https://github.com/LivetaK/ObjProgLab/assets/159531709/31bf60ec-3be5-4152-b3ed-20030e22b9d0)
+![Screenshot 2024-03-23 134006](https://github.com/LivetaK/ObjProgLab/assets/159531709/d7e99e27-117b-4a0a-96c6-beaa7e02d17c)
+![Screenshot 2024-03-23 134000](https://github.com/LivetaK/ObjProgLab/assets/159531709/90c7e175-e5e8-4d23-9a29-79f181efe3cf)
+![Screenshot 2024-03-23 133954](https://github.com/LivetaK/ObjProgLab/assets/159531709/54b63444-acc5-4a51-a723-d405d043b221)
+![Screenshot 2024-03-23 133947](https://github.com/LivetaK/ObjProgLab/assets/159531709/3fb007f5-666a-4bd7-b705-1888ecaa554b)
+
+
+deque
+
+
+![Screenshot 2024-03-23 134807](https://github.com/LivetaK/ObjProgLab/assets/159531709/9d4f38b9-b62b-4a6a-adfb-4fdb72740db5)
+![Screenshot 2024-03-23 134525](https://github.com/LivetaK/ObjProgLab/assets/159531709/c412b7a1-2cd8-44b5-9f14-f372a45342e4)
+![Screenshot 2024-03-23 134451](https://github.com/LivetaK/ObjProgLab/assets/159531709/8165ff39-0d89-4bf9-ab32-429a4c078350)
+![Screenshot 2024-03-23 134430](https://github.com/LivetaK/ObjProgLab/assets/159531709/e579b9a6-1f0c-4ebd-aef9-fd504956f068)
+![Screenshot 2024-03-23 134412](https://github.com/LivetaK/ObjProgLab/assets/159531709/8e41f261-693b-4692-9c47-7784db5b4243)
+
+
+list
+
+
+![Screenshot 2024-03-23 140437](https://github.com/LivetaK/ObjProgLab/assets/159531709/11b20737-5e4e-49ef-a127-7350d524fc98)
+![Screenshot 2024-03-23 140040](https://github.com/LivetaK/ObjProgLab/assets/159531709/186e8af9-e218-4553-9886-de1598486239)
+![Screenshot 2024-03-23 140007](https://github.com/LivetaK/ObjProgLab/assets/159531709/5bd818a9-9b15-45e0-ac61-f919a5b2cd81)
+![Screenshot 2024-03-23 135927](https://github.com/LivetaK/ObjProgLab/assets/159531709/9f309e78-1da6-4fbd-af41-5712a08705ac)
+![Screenshot 2024-03-23 135903](https://github.com/LivetaK/ObjProgLab/assets/159531709/09862ed5-8489-4f08-94f8-039bcf29cf2c)
+
+
+apibendrintai:
+
+
+![Screenshot 2024-03-23 191527](https://github.com/LivetaK/ObjProgLab/assets/159531709/1b238b4c-1ad4-4b5e-97b4-19e1bc07be34)
+
+
+2 STRATEGIJA
+
+
+vectors
+deque
+list
+
+
+3 STRATEGIJA
+
+
+vectors
+deque
+list
