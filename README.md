@@ -171,11 +171,46 @@ Tyrimas su 10 000 000 studentu:
 
 
 REZULTATAI SU LIST:
+
+
 Tyrimas su 1 000 studentu:
+
+
+![Screenshot 2024-03-23 103608](https://github.com/LivetaK/ObjProgLab/assets/159531709/8dedfbd8-d38e-4384-84b2-6983ce989fa9)
+![Screenshot 2024-03-23 103554](https://github.com/LivetaK/ObjProgLab/assets/159531709/9f481514-bff8-45bc-aef7-b068059a8b63)
+![Screenshot 2024-03-23 103541](https://github.com/LivetaK/ObjProgLab/assets/159531709/93b86af4-836d-4be8-9c77-c418a56d0b12)
+
+
 Tyrimas su 10 000 studentu:
+
+
+![Screenshot 2024-03-23 103718](https://github.com/LivetaK/ObjProgLab/assets/159531709/92a66ace-ee17-43fe-ac85-a20256135955)
+![Screenshot 2024-03-23 103656](https://github.com/LivetaK/ObjProgLab/assets/159531709/c854b266-484a-4091-b577-741388df841d)
+![Screenshot 2024-03-23 103637](https://github.com/LivetaK/ObjProgLab/assets/159531709/8db1afe2-8b68-4dcb-9e29-13f014095603)
+
+
 Tyrimas su 100 000 studentu:
+
+![Screenshot 2024-03-23 103826](https://github.com/LivetaK/ObjProgLab/assets/159531709/73dc5e46-d19c-4a51-a211-377b53d11e34)
+![Screenshot 2024-03-23 103810](https://github.com/LivetaK/ObjProgLab/assets/159531709/a0c7e619-a901-4250-bd00-f83555e77f30)
+![Screenshot 2024-03-23 103752](https://github.com/LivetaK/ObjProgLab/assets/159531709/afec6367-7e96-47b0-acca-e59abb2b8e27)
+
+
 Tyrimas su 1 000 000 studentu:
+
+
+![Screenshot 2024-03-23 104013](https://github.com/LivetaK/ObjProgLab/assets/159531709/be6ea2a8-dc7a-40f5-98a3-70b399a86038)
+![Screenshot 2024-03-23 103944](https://github.com/LivetaK/ObjProgLab/assets/159531709/0b849786-c89c-4990-a37b-a58ceecbfb8f)
+![Screenshot 2024-03-23 103915](https://github.com/LivetaK/ObjProgLab/assets/159531709/352ee267-6f07-42b0-928b-7fa12571d266)
+
+
 Tyrimas su 10 000 000 studentu:
+
+
+![Screenshot 2024-03-23 104915](https://github.com/LivetaK/ObjProgLab/assets/159531709/dd6cb089-f973-4540-bcc7-e091ff385b97)
+![Screenshot 2024-03-23 104618](https://github.com/LivetaK/ObjProgLab/assets/159531709/739a9e1b-16cc-4bfc-8bc2-59bb6a59947b)
+![Screenshot 2024-03-23 104307](https://github.com/LivetaK/ObjProgLab/assets/159531709/9823b12f-94e7-4820-ba39-a7c58038b770)
+
 
 *********************************************************
 
