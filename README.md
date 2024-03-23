@@ -212,6 +212,13 @@ Tyrimas su 10 000 000 studentu:
 ![Screenshot 2024-03-23 104307](https://github.com/LivetaK/ObjProgLab/assets/159531709/9823b12f-94e7-4820-ba39-a7c58038b770)
 
 
+
+Rezultatu apibendrinimas ir palyginimas:
+
+
+![Screenshot 2024-03-23 111932](https://github.com/LivetaK/ObjProgLab/assets/159531709/40d9c592-d1a6-4c26-96ed-116df5bf7ade)
+
+
 *********************************************************
 
 ANTRA TESTAVIMO DALIS 
