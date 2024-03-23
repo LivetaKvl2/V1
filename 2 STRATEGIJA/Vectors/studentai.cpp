@@ -152,28 +152,28 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
     Stud.str("");
 }
 
-void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai, vector<mok>& kietiakai) {
+void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai) {
     if (a == 'M' || a == 'm') {
-        auto it = studentai.begin();
-        while (it != studentai.end()) {
-            if (it->gal_med < 5) {
-                vargsiukai.push_back(*it);
-                it = studentai.erase(it); 
+        auto i = studentai.begin();
+        while (i != studentai.end()) {
+            if (i->gal_med < 5) {
+                vargsiukai.push_back(*i);
+                i = studentai.erase(i); 
             }
             else {
-                ++it; 
+                ++i; 
             }
         }
     }
     else {
-        auto it = studentai.begin();
-        while (it != studentai.end()) {
-            if (it->gal_vid < 5) {
-                vargsiukai.push_back(*it);
-                it = studentai.erase(it); 
+        auto i = studentai.begin();
+        while (i != studentai.end()) {
+            if (i->gal_vid < 5) {
+                vargsiukai.push_back(*i);
+                i = studentai.erase(i); 
             }
             else {
-                ++it;
+                ++i;
             }
         }
     }
