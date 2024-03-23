@@ -154,14 +154,10 @@ void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas) {
 
 void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok>& vargsiukai) {
     if (a == 'M' || a == 'm') {
-        auto i = studentai.begin();
-        while (i != studentai.end()) {
-            if (i->gal_med < 5) {
-                vargsiukai.push_back(*i);
-                i = studentai.erase(i); 
-            }
-            else {
-                ++i; 
+        for (auto& student : studentai) {
+            if (student.gal_med < 5) {
+                vargsiukai.push_back(student);
+                
             }
         }
     }
