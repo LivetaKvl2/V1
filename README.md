@@ -252,18 +252,18 @@ deque
 list
 
 
+![Screenshot 2024-03-27 150348](https://github.com/LivetaK/ObjProgLab/assets/159531709/35a25829-8431-4ec8-bb27-470b9c0e2cfe)
 ![Screenshot 2024-03-27 150122](https://github.com/LivetaK/ObjProgLab/assets/159531709/40b216cb-ddb0-44f4-8232-830d8366da1e)
 ![Screenshot 2024-03-27 150050](https://github.com/LivetaK/ObjProgLab/assets/159531709/e03f4107-4cab-4333-a04b-1f62506a90bd)
 ![Screenshot 2024-03-27 150029](https://github.com/LivetaK/ObjProgLab/assets/159531709/2a9e6ed1-571a-4b19-a43c-12c6196a2902)
 ![Screenshot 2024-03-27 150011](https://github.com/LivetaK/ObjProgLab/assets/159531709/ca66ffc2-0d03-46a4-a85d-c888bc1e1d69)
-![Screenshot 2024-03-27 150348](https://github.com/LivetaK/ObjProgLab/assets/159531709/35a25829-8431-4ec8-bb27-470b9c0e2cfe)
-
 
 
 
 apibendrintai:
 
 
+![Screenshot 2024-03-27 151250](https://github.com/LivetaK/ObjProgLab/assets/159531709/291e1fbc-3b37-4c3c-8a3f-09bf16624409)
 
 
 
