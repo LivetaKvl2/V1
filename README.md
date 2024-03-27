@@ -232,37 +232,39 @@ ANTRA TESTAVIMO DALIS
 vectors
 
 
-![Screenshot 2024-03-23 134011](https://github.com/LivetaK/ObjProgLab/assets/159531709/31bf60ec-3be5-4152-b3ed-20030e22b9d0)
-![Screenshot 2024-03-23 134006](https://github.com/LivetaK/ObjProgLab/assets/159531709/d7e99e27-117b-4a0a-96c6-beaa7e02d17c)
-![Screenshot 2024-03-23 134000](https://github.com/LivetaK/ObjProgLab/assets/159531709/90c7e175-e5e8-4d23-9a29-79f181efe3cf)
-![Screenshot 2024-03-23 133954](https://github.com/LivetaK/ObjProgLab/assets/159531709/54b63444-acc5-4a51-a723-d405d043b221)
-![Screenshot 2024-03-23 133947](https://github.com/LivetaK/ObjProgLab/assets/159531709/3fb007f5-666a-4bd7-b705-1888ecaa554b)
+![Screenshot 2024-03-27 150831](https://github.com/LivetaK/ObjProgLab/assets/159531709/0dbc0853-8efc-4b52-80e3-cfe365187297)
+![Screenshot 2024-03-27 150633](https://github.com/LivetaK/ObjProgLab/assets/159531709/8a801c62-0d5e-4252-ba31-b794a6f419cb)
+![Screenshot 2024-03-27 150607](https://github.com/LivetaK/ObjProgLab/assets/159531709/fd3f67a3-acd2-4eaa-a81d-43a333264c77)
+![Screenshot 2024-03-27 150551](https://github.com/LivetaK/ObjProgLab/assets/159531709/542afe0e-db4d-443b-a873-ccdb0c38a07d)
+![Screenshot 2024-03-27 150528](https://github.com/LivetaK/ObjProgLab/assets/159531709/770d5cee-7dbd-4317-af8e-22dc9c723689)
 
 
 deque
 
 
-![Screenshot 2024-03-23 134807](https://github.com/LivetaK/ObjProgLab/assets/159531709/9d4f38b9-b62b-4a6a-adfb-4fdb72740db5)
-![Screenshot 2024-03-23 134525](https://github.com/LivetaK/ObjProgLab/assets/159531709/c412b7a1-2cd8-44b5-9f14-f372a45342e4)
-![Screenshot 2024-03-23 134451](https://github.com/LivetaK/ObjProgLab/assets/159531709/8165ff39-0d89-4bf9-ab32-429a4c078350)
-![Screenshot 2024-03-23 134430](https://github.com/LivetaK/ObjProgLab/assets/159531709/e579b9a6-1f0c-4ebd-aef9-fd504956f068)
-![Screenshot 2024-03-23 134412](https://github.com/LivetaK/ObjProgLab/assets/159531709/8e41f261-693b-4692-9c47-7784db5b4243)
+![Screenshot 2024-03-27 145719](https://github.com/LivetaK/ObjProgLab/assets/159531709/3c9e6607-26c9-42b9-94e5-6e143cb9dc2f)
+![Screenshot 2024-03-27 145507](https://github.com/LivetaK/ObjProgLab/assets/159531709/6537cfae-4fa6-4279-af32-6a5f4f54eb86)
+![Screenshot 2024-03-27 145434](https://github.com/LivetaK/ObjProgLab/assets/159531709/668e8d56-3543-4834-8b64-04965da3fb6b)
+![Screenshot 2024-03-27 145411](https://github.com/LivetaK/ObjProgLab/assets/159531709/46dd6cda-b853-45ea-900a-f06b3318102a)
+![Screenshot 2024-03-27 145350](https://github.com/LivetaK/ObjProgLab/assets/159531709/379662e7-350b-44f7-988e-9ae927ab1426)
 
 
 list
 
 
-![Screenshot 2024-03-23 140437](https://github.com/LivetaK/ObjProgLab/assets/159531709/11b20737-5e4e-49ef-a127-7350d524fc98)
-![Screenshot 2024-03-23 140040](https://github.com/LivetaK/ObjProgLab/assets/159531709/186e8af9-e218-4553-9886-de1598486239)
-![Screenshot 2024-03-23 140007](https://github.com/LivetaK/ObjProgLab/assets/159531709/5bd818a9-9b15-45e0-ac61-f919a5b2cd81)
-![Screenshot 2024-03-23 135927](https://github.com/LivetaK/ObjProgLab/assets/159531709/9f309e78-1da6-4fbd-af41-5712a08705ac)
-![Screenshot 2024-03-23 135903](https://github.com/LivetaK/ObjProgLab/assets/159531709/09862ed5-8489-4f08-94f8-039bcf29cf2c)
+![Screenshot 2024-03-27 150122](https://github.com/LivetaK/ObjProgLab/assets/159531709/40b216cb-ddb0-44f4-8232-830d8366da1e)
+![Screenshot 2024-03-27 150050](https://github.com/LivetaK/ObjProgLab/assets/159531709/e03f4107-4cab-4333-a04b-1f62506a90bd)
+![Screenshot 2024-03-27 150029](https://github.com/LivetaK/ObjProgLab/assets/159531709/2a9e6ed1-571a-4b19-a43c-12c6196a2902)
+![Screenshot 2024-03-27 150011](https://github.com/LivetaK/ObjProgLab/assets/159531709/ca66ffc2-0d03-46a4-a85d-c888bc1e1d69)
+![Screenshot 2024-03-27 150348](https://github.com/LivetaK/ObjProgLab/assets/159531709/35a25829-8431-4ec8-bb27-470b9c0e2cfe)
+
+
 
 
 apibendrintai:
 
 
-![Screenshot 2024-03-23 191527](https://github.com/LivetaK/ObjProgLab/assets/159531709/1b238b4c-1ad4-4b5e-97b4-19e1bc07be34)
+
 
 
 2 STRATEGIJA
