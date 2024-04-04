@@ -303,11 +303,10 @@ list
 apibendrintai:
 
 
+![Screenshot 2024-04-04 201653](https://github.com/LivetaK/ObjProgLab/assets/159531709/229c624b-f8bc-422f-85d5-b3973b72e758)
+
 
 
 3 STRATEGIJA
 
-
-vectors
-deque
-list
+Kadangi pradiėje programoje buvo naudota std :: partition, niekas nebuvo pakeista, bet čia apibendrinti rezultatai:
