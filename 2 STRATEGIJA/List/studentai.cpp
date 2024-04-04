@@ -259,12 +259,12 @@ void rikiavimas(int ketvirtasPasirinkimas, list<mok>& studentai) {
     }
     case 3:
     {
-        studentai.sort(pagalMediana);
+        studentai.sort(pagalVidurki);
         break;
     }
     case 4:
     {
-        studentai.sort(pagalVidurki);
+        studentai.sort(pagalMediana);
         break;
     }
     }
