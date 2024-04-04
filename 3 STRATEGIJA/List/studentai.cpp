@@ -174,8 +174,6 @@ void konteineriai(int studentuKiekis, list<mok>& studentai, char a, list<mok>& v
         vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
         kietiakai.insert(kietiakai.end(), partitionIt, studentai.end());
     }
-
-    studentai.clear();
 }
 
 void isvalymas(list<mok>& vektorius) {
