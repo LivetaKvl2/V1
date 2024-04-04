@@ -171,9 +171,6 @@ void konteineriai(int studentuKiekis, vector<mok>& studentai, char a, vector<mok
         vargsiukai.insert(vargsiukai.end(), studentai.begin(), partitionIt);
         kietiakai.insert(kietiakai.end(), partitionIt, studentai.end());
     }
-
-    studentai.clear();
-    studentai.shrink_to_fit();
 }
 
 void isvalymas(vector<mok>& vektorius) {
