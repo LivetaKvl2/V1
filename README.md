@@ -309,4 +309,42 @@ apibendrintai:
 
 3 STRATEGIJA
 
-Kadangi pradiėje programoje buvo naudota std :: partition, niekas nebuvo pakeista, bet čia apibendrinti rezultatai:
+
+Kadangi pradiėje programoje buvo naudota std :: partition, niekas nebuvo pakeista, tik studentų konteinerio trynimas iškeltas iš funkcijos:
+
+
+vectors
+
+
+![Screenshot 2024-04-04 212903](https://github.com/LivetaK/ObjProgLab/assets/159531709/8dbf1de8-e9a7-486c-a84e-fd8626da18bf)
+![Screenshot 2024-04-04 212715](https://github.com/LivetaK/ObjProgLab/assets/159531709/5def58b2-6e7b-4907-8be2-e3bf8794a525)
+![Screenshot 2024-04-04 212651](https://github.com/LivetaK/ObjProgLab/assets/159531709/7b10b6bc-0ed5-4eaa-8c38-27dc86980398)
+![Screenshot 2024-04-04 212634](https://github.com/LivetaK/ObjProgLab/assets/159531709/1ff7d5ca-2676-4f82-a91f-555c11011113)
+![Screenshot 2024-04-04 212602](https://github.com/LivetaK/ObjProgLab/assets/159531709/8a4b8613-dec6-4a3e-8c42-8f2d5c1c5e43)
+
+
+deque
+
+
+![Screenshot 2024-04-04 214156](https://github.com/LivetaK/ObjProgLab/assets/159531709/f76304c3-5ae9-4cc2-bbbb-2a46e2553a4f)
+![Screenshot 2024-04-04 213943](https://github.com/LivetaK/ObjProgLab/assets/159531709/e95ca626-586b-452b-957f-58ccf45c8e2d)
+![Screenshot 2024-04-04 213918](https://github.com/LivetaK/ObjProgLab/assets/159531709/51d9af67-467f-49ea-9496-52395d29172d)
+![Screenshot 2024-04-04 213905](https://github.com/LivetaK/ObjProgLab/assets/159531709/1d5f6e29-89a0-49eb-a443-86a993cd7643)
+![Screenshot 2024-04-04 213850](https://github.com/LivetaK/ObjProgLab/assets/159531709/aad674ce-cea8-4b71-890f-0e3fde089046)
+
+
+list
+
+
+![Screenshot 2024-04-04 213637](https://github.com/LivetaK/ObjProgLab/assets/159531709/5d3e3619-eed1-4e90-a3b9-85cb202ee5da)
+![Screenshot 2024-04-04 213358](https://github.com/LivetaK/ObjProgLab/assets/159531709/da9070c6-b1dc-4434-8edd-250e06cde8d5)
+![Screenshot 2024-04-04 213331](https://github.com/LivetaK/ObjProgLab/assets/159531709/8aa98ef2-cf54-4570-86ee-7196d002dac1)
+![Screenshot 2024-04-04 213316](https://github.com/LivetaK/ObjProgLab/assets/159531709/f8184784-6013-4d79-80ed-aac22e4d9fb9)
+![Screenshot 2024-04-04 213301](https://github.com/LivetaK/ObjProgLab/assets/159531709/76735f9c-666a-47b4-b071-7d4683e22688)
+
+
+
+
+
+
+
