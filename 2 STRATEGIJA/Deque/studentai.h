@@ -34,7 +34,7 @@ bool pagalMediana(const mok& a, const mok& b);
 bool pagalVidurki(const mok& a, const mok& b);
 milliseconds trukmesSkaiciavimas(high_resolution_clock::time_point pradzia, high_resolution_clock::time_point pabaiga);
 void failuGeneravimas(int studentuKiekis, const string& failoPavadinimas);
-void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai, deque<mok>& kietiakai);
+void konteineriai(int studentuKiekis, deque<mok>& studentai, char a, deque<mok>& vargsiukai);
 void isvalymas(deque<mok>& vektorius);
 void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas);
 int pirmasP(int& pirmasPasirinkimas);
