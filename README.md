@@ -271,13 +271,42 @@ apibendrintai:
 
 
 vectors
+
+
+![Screenshot 2024-03-27 175938](https://github.com/LivetaK/ObjProgLab/assets/159531709/955732f5-e331-496f-9c31-96f71954c5d2)
+![Screenshot 2024-03-27 175748](https://github.com/LivetaK/ObjProgLab/assets/159531709/c5c5c0f9-4aa6-42a9-a31f-ec42d64790cb)
+![Screenshot 2024-03-27 175715](https://github.com/LivetaK/ObjProgLab/assets/159531709/1a0687ef-b20c-4a89-985a-732ac14989d7)
+![Screenshot 2024-03-27 175656](https://github.com/LivetaK/ObjProgLab/assets/159531709/1efb0e1a-71d7-4cf7-854e-39ca03790d2e)
+![Screenshot 2024-03-27 175637](https://github.com/LivetaK/ObjProgLab/assets/159531709/4f63d614-3460-4cd9-8775-7702b04cece9)
+
+
 deque
+
+
+![Screenshot 2024-04-04 193250](https://github.com/LivetaK/ObjProgLab/assets/159531709/04b76f80-3de6-4d96-b286-a18c93a76bce)
+![Screenshot 2024-04-04 193036](https://github.com/LivetaK/ObjProgLab/assets/159531709/293ede4c-9771-4599-8b10-7077ddb4a1d9)
+![Screenshot 2024-04-04 193004](https://github.com/LivetaK/ObjProgLab/assets/159531709/2f2dbfef-d692-4bea-9291-cfaf5f9ef144)
+![Screenshot 2024-04-04 192946](https://github.com/LivetaK/ObjProgLab/assets/159531709/7de91b0a-7592-4b2b-9b38-712f32de4363)
+![Screenshot 2024-04-04 192925](https://github.com/LivetaK/ObjProgLab/assets/159531709/08ec5fb4-c3cc-47e7-b870-34d5046d70ae)
+
+
 list
+
+
+![Screenshot 2024-04-04 194435](https://github.com/LivetaK/ObjProgLab/assets/159531709/c4fb6311-2214-43d0-b964-dcf8cefa7422)
+![Screenshot 2024-04-04 194220](https://github.com/LivetaK/ObjProgLab/assets/159531709/faad14f9-9bee-4d15-a081-cb4c764b3580)
+![Screenshot 2024-04-04 194154](https://github.com/LivetaK/ObjProgLab/assets/159531709/60349ceb-6122-4e7c-887e-9081be42414d)
+![Screenshot 2024-04-04 194139](https://github.com/LivetaK/ObjProgLab/assets/159531709/87e185ff-a763-4e12-b5f4-20ce51c64a51)
+![Screenshot 2024-04-04 194115](https://github.com/LivetaK/ObjProgLab/assets/159531709/ed371b5c-33a1-41f9-9bb6-b49ae227fac9)
+
+
+apibendrintai:
+
+
+![Screenshot 2024-04-04 201653](https://github.com/LivetaK/ObjProgLab/assets/159531709/229c624b-f8bc-422f-85d5-b3973b72e758)
+
 
 
 3 STRATEGIJA
 
-
-vectors
-deque
-list
+Kadangi pradiėje programoje buvo naudota std :: partition, niekas nebuvo pakeista, bet čia apibendrinti rezultatai:
