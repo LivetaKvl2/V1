@@ -343,6 +343,11 @@ list
 ![Screenshot 2024-04-04 213301](https://github.com/LivetaK/ObjProgLab/assets/159531709/76735f9c-666a-47b4-b071-7d4683e22688)
 
 
+apibendrintai:
+
+
+![Screenshot 2024-04-04 214629](https://github.com/LivetaK/ObjProgLab/assets/159531709/463c11c6-b273-4e0b-b3f5-8d574a4b5d30)
+
 
 
 
