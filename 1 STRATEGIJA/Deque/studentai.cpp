@@ -1,6 +1,5 @@
 #include "studentai.h"
 
-
 void ivedimas(deque<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;
@@ -15,7 +14,6 @@ void ivedimas(deque<mok>& stud) {
             cout << "Netinkamas formatas, bandykite dar karta" << endl;
             continue;
         }
-
         if (pazymys < 0) {
             break;
         }
