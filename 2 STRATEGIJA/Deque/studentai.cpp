@@ -83,7 +83,6 @@ char rikiavimoklausimas() {
 }
 
 void isvedimas(deque<mok>& stud, ostream& os, char a) {
-
     if (a == 'V' || a == 'v') {
         os << left << setw(20) << "Pavarde" << setw(20) << "Vardas" << setw(20) << "Galutinis (Vid.)" << endl;
         os << "--------------------------------------------------------------" << endl;
@@ -115,12 +114,15 @@ void meniuAntras(int& antrasPasirinkimas) {
 bool pagalVarda(const mok& a, const mok& b) {
     return stoi(a.var.substr(6, 1)) < stoi(b.var.substr(6, 1));
 }
+
 bool pagalPavarde(const mok& a, const mok& b) {
     return stoi(a.pav.substr(7, 1)) < stoi(b.pav.substr(7, 1));
 }
+
 bool pagalMediana(const mok& a, const mok& b) {
     return a.gal_med < b.gal_med;
 }
+
 bool pagalVidurki(const mok& a, const mok& b) {
     return a.gal_vid < b.gal_vid;
 }
