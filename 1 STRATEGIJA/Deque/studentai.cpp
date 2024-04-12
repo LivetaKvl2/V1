@@ -113,12 +113,15 @@ void meniuAntras(int& antrasPasirinkimas) {
 bool pagalVarda(const mok& a, const mok& b) {
     return stoi(a.var.substr(6, 1)) < stoi(b.var.substr(6, 1));
 }
+
 bool pagalPavarde(const mok& a, const mok& b) {
     return stoi(a.pav.substr(7, 1)) < stoi(b.pav.substr(7, 1));
 }
+
 bool pagalMediana(const mok& a, const mok& b) {
     return a.gal_med < b.gal_med;
 }
+
 bool pagalVidurki(const mok& a, const mok& b) {
     return a.gal_vid < b.gal_vid;
 }
