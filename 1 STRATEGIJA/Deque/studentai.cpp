@@ -177,6 +177,7 @@ void isvalymas(deque<mok>& vektorius) {
     }
     vektorius.clear();
 }
+
 void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas) {
     ifstream file;
     do {
