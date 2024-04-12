@@ -216,6 +216,7 @@ void failuNuskaitymas(deque<mok>& studentai, string& failoPavadinimas) {
     }
     file.close();
 }
+
 int pirmasP(int& pirmasPasirinkimas) {
     cout << "Jei norite duomenis ivesti ranka, iveskite 1, jei norite, kad duomenys butu nuskaityti is failo, iveskite 2" << endl;
     cin >> pirmasPasirinkimas;
