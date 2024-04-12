@@ -53,7 +53,6 @@ void meniu(int& antrasPasirinkimas) {
 }
 
 void calculateResults(deque<mok>& stud) {
-
     for (int i = 0; i < stud.size(); i++) {
         double sum = accumulate(stud[i].nd.begin(), stud[i].nd.end(), 0.0);
         double vid = sum / stud[i].nd.size();
