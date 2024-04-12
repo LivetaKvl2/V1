@@ -79,6 +79,7 @@ char rikiavimoklausimas() {
     }
     return a;
 }
+
 void isvedimas(deque<mok>& stud, ostream& os, char a) {
 
     if (a == 'V' || a == 'v') {
