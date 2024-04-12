@@ -34,7 +34,6 @@ void ivedimas(deque<mok>& stud) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
-
     stud.push_back(naujas_stud);
 }
 
