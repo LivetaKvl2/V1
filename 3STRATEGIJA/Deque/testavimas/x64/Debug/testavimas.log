@@ -1,0 +1,3 @@
+﻿  testavimas.cpp
+C:\Users\Liveta\opld\Deque\testavimas.cpp(11,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  testavimas.vcxproj -> C:\Users\Liveta\opld\Deque\x64\Debug\testavimas.exe

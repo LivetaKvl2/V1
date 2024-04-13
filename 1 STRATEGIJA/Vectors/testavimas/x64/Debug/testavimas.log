@@ -1,7 +1,0 @@
-﻿  studentai.cpp
-C:\Users\Liveta\ObjProgLab\ObjProgLab\studentai.cpp(211,9): warning C4101: 'pazymys': unreferenced local variable
-C:\Users\Liveta\ObjProgLab\ObjProgLab\studentai.cpp(229,36): warning C4101: 'e': unreferenced local variable
-  testavimas.cpp
-C:\Users\Liveta\ObjProgLab\ObjProgLab\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-  testavimas.vcxproj -> C:\Users\Liveta\ObjProgLab\ObjProgLab\x64\Debug\testavimas.exe

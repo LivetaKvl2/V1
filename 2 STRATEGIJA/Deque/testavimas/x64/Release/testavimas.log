@@ -1,8 +1,0 @@
-﻿  testavimas.cpp
-C:\Users\Liveta\opld\2 STRATEGIJA\Deque\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating code
-  6 of 634 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  testavimas.vcxproj -> C:\Users\Liveta\opld\2 STRATEGIJA\Deque\x64\Release\testavimas.exe

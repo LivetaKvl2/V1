@@ -1,0 +1,8 @@
+﻿  testavimas.cpp
+C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\testavimas.cpp(10,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  5 of 484 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  testavimas.vcxproj -> C:\Users\Liveta\opld\1 STRATEGIJA\Vectors\x64\Release\testavimas.exe
