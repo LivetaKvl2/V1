@@ -1,7 +1,7 @@
 #include "studentai.h"
 
 void ivedimas(deque<mok>& stud) {
-    mok naujas_stud;
+    mok naujas_stud
     cout << "Iveskite studento varda ir pavarde:" << endl;
     cin >> naujas_stud.var >> naujas_stud.pav;
     int pazymys;
