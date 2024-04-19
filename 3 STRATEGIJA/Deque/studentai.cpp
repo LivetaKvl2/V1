@@ -1,5 +1,6 @@
 #include "studentai.h"
 
+
 void ivedimas(deque<mok>& stud) {
     mok naujas_stud;
     cout << "Iveskite studento varda ir pavarde:" << endl;
