@@ -266,4 +266,4 @@ void rikiavimas(int ketvirtasPasirinkimas, deque<mok>& studentai) {
         break;
     }
     }
-
+}
