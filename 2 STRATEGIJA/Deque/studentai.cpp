@@ -265,5 +265,5 @@ void rikiavimas(int ketvirtasPasirinkimas, deque<mok>& studentai) {
         sort(studentai.begin(), studentai.end(), pagalMediana);
         break;
     }
-    
+    }
 }
